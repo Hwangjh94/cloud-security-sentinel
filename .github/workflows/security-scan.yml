@@ -71,4 +71,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: security-reports
-          path: security-reports/ 
+          path: security-reports/    
