@@ -656,5 +656,29 @@
       "CRITICAL": 14,
       "HIGH": 3
     }
+  },
+  {
+    "timestamp": "2025-03-21T14:20:42.983038",
+    "repository": "unknown",
+    "commit_sha": "unknown",
+    "github_actor": "unknown",
+    "summary": {
+      "total_issues": 17,
+      "severity_counts": {
+        "CRITICAL": 11,
+        "HIGH": 3,
+        "MEDIUM": 3,
+        "LOW": 0
+      },
+      "scanners_used": [
+        "checkov",
+        "tfsec"
+      ]
+    },
+    "should_block": true,
+    "severity_counts": {
+      "CRITICAL": 14,
+      "HIGH": 3
+    }
   }
 ]
