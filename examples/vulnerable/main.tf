@@ -82,4 +82,4 @@ resource "aws_iam_policy" "too_much_power" {
   })
 }
 
-     
+       
