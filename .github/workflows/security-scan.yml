@@ -39,6 +39,12 @@ jobs:
           GITHUB_SHA: ${{ github.sha }}
           GITHUB_ACTOR: ${{ github.actor }}
 
+      - name: Fail on critical issues
+        if: steps.security_scan.outputs.critical_issues == 'true'
+        run: |
+          echo "::error::Critical security issues detected! Workflow blocked."
+          exit 1
+
       - name: Tag developer for critical issues
         if: steps.security_scan.outputs.critical_issues == 'true'
         run: python -m src.user_management.developer_tagger

@@ -48,11 +48,15 @@ def block_workflow():
         logger.error("GitHub 토큰이 환경 변수에 설정되지 않았습니다.")
         return False
     
+    logger.debug(f"토큰 확인됨: {github_token[:4]}...")
+    
     # 저장소 정보 확인
     github_repo = os.environ.get("GITHUB_REPOSITORY")
     if not github_repo:
         logger.error("GitHub 저장소 정보가 환경 변수에 설정되지 않았습니다.")
         return False
+    
+    logger.debug(f"저장소 정보: {github_repo}")
     
     # 커밋 정보 확인
     commit_sha = os.environ.get("GITHUB_SHA")
@@ -81,7 +85,17 @@ def block_workflow():
         # GitHub API 클라이언트 초기화
         g = Github(github_token)
         repo = g.get_repo(github_repo)
-        
+
+        # 커밋 상태 변경 시도
+        logger.debug(f"커밋 상태 변경 시도: {commit_sha}")
+        status = repo.get_commit(commit_sha).create_status(
+            state="failure",
+            description="심각한 보안 취약점 발견으로 인해 차단됨",
+            context="security-sentinel"
+        )
+        logger.debug(f"상태 변경 결과: {status.state}")
+
+
         # 워크플로우 상태 저장
         block_info = {
             "repository": github_repo,
