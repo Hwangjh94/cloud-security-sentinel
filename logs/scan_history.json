@@ -1,0 +1,660 @@
+[
+  {
+    "timestamp": "2025-03-21T11:49:59.700899",
+    "repository": "unknown",
+    "commit_sha": "unknown",
+    "github_actor": "unknown",
+    "summary": {
+      "total_issues": 13,
+      "severity_counts": {
+        "CRITICAL": 5,
+        "HIGH": 2,
+        "MEDIUM": 6,
+        "LOW": 0
+      },
+      "scanners_used": [
+        "checkov",
+        "tfsec"
+      ]
+    },
+    "should_block": true,
+    "severity_counts": {
+      "CRITICAL": 9,
+      "MEDIUM": 1,
+      "HIGH": 3
+    }
+  },
+  {
+    "timestamp": "2025-03-21T11:50:22.712303",
+    "repository": "unknown",
+    "commit_sha": "unknown",
+    "github_actor": "unknown",
+    "summary": {
+      "total_issues": 33,
+      "severity_counts": {
+        "CRITICAL": 16,
+        "HIGH": 8,
+        "MEDIUM": 9,
+        "LOW": 0
+      },
+      "scanners_used": [
+        "checkov",
+        "tfsec"
+      ]
+    },
+    "should_block": true,
+    "severity_counts": {
+      "HIGH": 12,
+      "CRITICAL": 20,
+      "MEDIUM": 1
+    }
+  },
+  {
+    "timestamp": "2025-03-21T11:52:12.024017",
+    "repository": "unknown",
+    "commit_sha": "unknown",
+    "github_actor": "unknown",
+    "summary": {
+      "total_issues": 13,
+      "severity_counts": {
+        "CRITICAL": 5,
+        "HIGH": 2,
+        "MEDIUM": 6,
+        "LOW": 0
+      },
+      "scanners_used": [
+        "checkov",
+        "tfsec"
+      ]
+    },
+    "should_block": true,
+    "severity_counts": {
+      "CRITICAL": 9,
+      "MEDIUM": 1,
+      "HIGH": 3
+    }
+  },
+  {
+    "timestamp": "2025-03-21T11:53:00.663908",
+    "repository": "unknown",
+    "commit_sha": "unknown",
+    "github_actor": "unknown",
+    "summary": {
+      "total_issues": 13,
+      "severity_counts": {
+        "CRITICAL": 5,
+        "HIGH": 2,
+        "MEDIUM": 6,
+        "LOW": 0
+      },
+      "scanners_used": [
+        "checkov",
+        "tfsec"
+      ]
+    },
+    "should_block": true,
+    "severity_counts": {
+      "CRITICAL": 9,
+      "MEDIUM": 1,
+      "HIGH": 3
+    }
+  },
+  {
+    "timestamp": "2025-03-21T11:58:55.845011",
+    "repository": "unknown",
+    "commit_sha": "unknown",
+    "github_actor": "unknown",
+    "summary": {
+      "total_issues": 13,
+      "severity_counts": {
+        "CRITICAL": 6,
+        "HIGH": 2,
+        "MEDIUM": 5,
+        "LOW": 0
+      },
+      "scanners_used": [
+        "checkov",
+        "tfsec"
+      ]
+    },
+    "should_block": true,
+    "severity_counts": {
+      "CRITICAL": 9,
+      "MEDIUM": 1,
+      "HIGH": 3
+    }
+  },
+  {
+    "timestamp": "2025-03-21T12:04:10.519323",
+    "repository": "unknown",
+    "commit_sha": "unknown",
+    "github_actor": "unknown",
+    "summary": {
+      "total_issues": 13,
+      "severity_counts": {
+        "CRITICAL": 6,
+        "HIGH": 2,
+        "MEDIUM": 5,
+        "LOW": 0
+      },
+      "scanners_used": [
+        "checkov",
+        "tfsec"
+      ]
+    },
+    "should_block": true,
+    "severity_counts": {
+      "CRITICAL": 9,
+      "MEDIUM": 1,
+      "HIGH": 3
+    }
+  },
+  {
+    "timestamp": "2025-03-21T12:06:54.154997",
+    "repository": "unknown",
+    "commit_sha": "unknown",
+    "github_actor": "unknown",
+    "summary": {
+      "total_issues": 13,
+      "severity_counts": {
+        "CRITICAL": 6,
+        "HIGH": 2,
+        "MEDIUM": 5,
+        "LOW": 0
+      },
+      "scanners_used": [
+        "checkov",
+        "tfsec"
+      ]
+    },
+    "should_block": true,
+    "severity_counts": {
+      "CRITICAL": 9,
+      "MEDIUM": 1,
+      "HIGH": 3
+    }
+  },
+  {
+    "timestamp": "2025-03-21T12:09:39.533237",
+    "repository": "unknown",
+    "commit_sha": "unknown",
+    "github_actor": "unknown",
+    "summary": {
+      "total_issues": 13,
+      "severity_counts": {
+        "CRITICAL": 6,
+        "HIGH": 2,
+        "MEDIUM": 5,
+        "LOW": 0
+      },
+      "scanners_used": [
+        "checkov",
+        "tfsec"
+      ]
+    },
+    "should_block": true,
+    "severity_counts": {
+      "CRITICAL": 9,
+      "MEDIUM": 1,
+      "HIGH": 3
+    }
+  },
+  {
+    "timestamp": "2025-03-21T12:11:16.505946",
+    "repository": "unknown",
+    "commit_sha": "unknown",
+    "github_actor": "unknown",
+    "summary": {
+      "total_issues": 10,
+      "severity_counts": {
+        "CRITICAL": 7,
+        "HIGH": 1,
+        "MEDIUM": 2,
+        "LOW": 0
+      },
+      "scanners_used": [
+        "checkov",
+        "tfsec"
+      ]
+    },
+    "should_block": true,
+    "severity_counts": {
+      "MEDIUM": 1,
+      "HIGH": 2,
+      "CRITICAL": 7
+    }
+  },
+  {
+    "timestamp": "2025-03-21T12:16:42.769779",
+    "repository": "unknown",
+    "commit_sha": "unknown",
+    "github_actor": "unknown",
+    "summary": {
+      "total_issues": 10,
+      "severity_counts": {
+        "CRITICAL": 7,
+        "HIGH": 1,
+        "MEDIUM": 2,
+        "LOW": 0
+      },
+      "scanners_used": [
+        "checkov",
+        "tfsec"
+      ]
+    },
+    "should_block": true,
+    "severity_counts": {
+      "MEDIUM": 1,
+      "HIGH": 2,
+      "CRITICAL": 7
+    }
+  },
+  {
+    "timestamp": "2025-03-21T12:19:20.457295",
+    "repository": "unknown",
+    "commit_sha": "unknown",
+    "github_actor": "unknown",
+    "summary": {
+      "total_issues": 9,
+      "severity_counts": {
+        "CRITICAL": 6,
+        "HIGH": 2,
+        "MEDIUM": 1,
+        "LOW": 0
+      },
+      "scanners_used": [
+        "checkov",
+        "tfsec"
+      ]
+    },
+    "should_block": true,
+    "severity_counts": {
+      "CRITICAL": 7,
+      "HIGH": 2
+    }
+  },
+  {
+    "timestamp": "2025-03-21T12:19:29.775981",
+    "repository": "unknown",
+    "commit_sha": "unknown",
+    "github_actor": "unknown",
+    "summary": {
+      "total_issues": 9,
+      "severity_counts": {
+        "CRITICAL": 6,
+        "HIGH": 2,
+        "MEDIUM": 1,
+        "LOW": 0
+      },
+      "scanners_used": [
+        "checkov",
+        "tfsec"
+      ]
+    },
+    "should_block": true,
+    "severity_counts": {
+      "CRITICAL": 7,
+      "HIGH": 2
+    }
+  },
+  {
+    "timestamp": "2025-03-21T12:21:19.857989",
+    "repository": "unknown",
+    "commit_sha": "unknown",
+    "github_actor": "unknown",
+    "summary": {
+      "total_issues": 0,
+      "severity_counts": {
+        "CRITICAL": 0,
+        "HIGH": 0,
+        "MEDIUM": 0,
+        "LOW": 0
+      },
+      "scanners_used": [
+        "checkov",
+        "tfsec"
+      ]
+    },
+    "should_block": false,
+    "severity_counts": {}
+  },
+  {
+    "timestamp": "2025-03-21T12:28:25.435785",
+    "repository": "unknown",
+    "commit_sha": "unknown",
+    "github_actor": "unknown",
+    "summary": {
+      "total_issues": 0,
+      "severity_counts": {
+        "CRITICAL": 0,
+        "HIGH": 0,
+        "MEDIUM": 0,
+        "LOW": 0
+      },
+      "scanners_used": [
+        "checkov",
+        "tfsec"
+      ]
+    },
+    "should_block": false,
+    "severity_counts": {}
+  },
+  {
+    "timestamp": "2025-03-21T12:30:49.447321",
+    "repository": "unknown",
+    "commit_sha": "unknown",
+    "github_actor": "unknown",
+    "summary": {
+      "total_issues": 0,
+      "severity_counts": {
+        "CRITICAL": 0,
+        "HIGH": 0,
+        "MEDIUM": 0,
+        "LOW": 0
+      },
+      "scanners_used": [
+        "checkov",
+        "tfsec"
+      ]
+    },
+    "should_block": false,
+    "severity_counts": {}
+  },
+  {
+    "timestamp": "2025-03-21T12:32:49.054149",
+    "repository": "unknown",
+    "commit_sha": "unknown",
+    "github_actor": "unknown",
+    "summary": {
+      "total_issues": 0,
+      "severity_counts": {
+        "CRITICAL": 0,
+        "HIGH": 0,
+        "MEDIUM": 0,
+        "LOW": 0
+      },
+      "scanners_used": [
+        "checkov",
+        "tfsec"
+      ]
+    },
+    "should_block": false,
+    "severity_counts": {}
+  },
+  {
+    "timestamp": "2025-03-21T12:33:01.208715",
+    "repository": "unknown",
+    "commit_sha": "unknown",
+    "github_actor": "unknown",
+    "summary": {
+      "total_issues": 0,
+      "severity_counts": {
+        "CRITICAL": 0,
+        "HIGH": 0,
+        "MEDIUM": 0,
+        "LOW": 0
+      },
+      "scanners_used": [
+        "checkov",
+        "tfsec"
+      ]
+    },
+    "should_block": false,
+    "severity_counts": {}
+  },
+  {
+    "timestamp": "2025-03-21T12:35:30.933059",
+    "repository": "unknown",
+    "commit_sha": "unknown",
+    "github_actor": "unknown",
+    "summary": {
+      "total_issues": 0,
+      "severity_counts": {
+        "CRITICAL": 0,
+        "HIGH": 0,
+        "MEDIUM": 0,
+        "LOW": 0
+      },
+      "scanners_used": [
+        "checkov",
+        "tfsec"
+      ]
+    },
+    "should_block": false,
+    "severity_counts": {}
+  },
+  {
+    "timestamp": "2025-03-21T12:40:23.494808",
+    "repository": "unknown",
+    "commit_sha": "unknown",
+    "github_actor": "unknown",
+    "summary": {
+      "total_issues": 0,
+      "severity_counts": {
+        "CRITICAL": 0,
+        "HIGH": 0,
+        "MEDIUM": 0,
+        "LOW": 0
+      },
+      "scanners_used": [
+        "checkov",
+        "tfsec"
+      ]
+    },
+    "should_block": false,
+    "severity_counts": {}
+  },
+  {
+    "timestamp": "2025-03-21T12:43:00.767864",
+    "repository": "unknown",
+    "commit_sha": "unknown",
+    "github_actor": "unknown",
+    "summary": {
+      "total_issues": 17,
+      "severity_counts": {
+        "CRITICAL": 11,
+        "HIGH": 3,
+        "MEDIUM": 3,
+        "LOW": 0
+      },
+      "scanners_used": [
+        "checkov",
+        "tfsec"
+      ]
+    },
+    "should_block": true,
+    "severity_counts": {
+      "CRITICAL": 14,
+      "HIGH": 3
+    }
+  },
+  {
+    "timestamp": "2025-03-21T12:44:50.676322",
+    "repository": "unknown",
+    "commit_sha": "unknown",
+    "github_actor": "unknown",
+    "summary": {
+      "total_issues": 0,
+      "severity_counts": {
+        "CRITICAL": 0,
+        "HIGH": 0,
+        "MEDIUM": 0,
+        "LOW": 0
+      },
+      "scanners_used": [
+        "checkov",
+        "tfsec"
+      ]
+    },
+    "should_block": false,
+    "severity_counts": {}
+  },
+  {
+    "timestamp": "2025-03-21T12:44:54.927946",
+    "repository": "unknown",
+    "commit_sha": "unknown",
+    "github_actor": "unknown",
+    "summary": {
+      "total_issues": 17,
+      "severity_counts": {
+        "CRITICAL": 11,
+        "HIGH": 3,
+        "MEDIUM": 3,
+        "LOW": 0
+      },
+      "scanners_used": [
+        "checkov",
+        "tfsec"
+      ]
+    },
+    "should_block": true,
+    "severity_counts": {
+      "CRITICAL": 14,
+      "HIGH": 3
+    }
+  },
+  {
+    "timestamp": "2025-03-21T12:46:27.426079",
+    "repository": "unknown",
+    "commit_sha": "unknown",
+    "github_actor": "unknown",
+    "summary": {
+      "total_issues": 17,
+      "severity_counts": {
+        "CRITICAL": 11,
+        "HIGH": 3,
+        "MEDIUM": 3,
+        "LOW": 0
+      },
+      "scanners_used": [
+        "checkov",
+        "tfsec"
+      ]
+    },
+    "should_block": true,
+    "severity_counts": {
+      "CRITICAL": 14,
+      "HIGH": 3
+    }
+  },
+  {
+    "timestamp": "2025-03-21T12:46:35.271193",
+    "repository": "unknown",
+    "commit_sha": "unknown",
+    "github_actor": "unknown",
+    "summary": {
+      "total_issues": 17,
+      "severity_counts": {
+        "CRITICAL": 11,
+        "HIGH": 3,
+        "MEDIUM": 3,
+        "LOW": 0
+      },
+      "scanners_used": [
+        "checkov",
+        "tfsec"
+      ]
+    },
+    "should_block": true,
+    "severity_counts": {
+      "CRITICAL": 14,
+      "HIGH": 3
+    }
+  },
+  {
+    "timestamp": "2025-03-21T14:06:00.869846",
+    "repository": "unknown",
+    "commit_sha": "unknown",
+    "github_actor": "unknown",
+    "summary": {
+      "total_issues": 17,
+      "severity_counts": {
+        "CRITICAL": 11,
+        "HIGH": 3,
+        "MEDIUM": 3,
+        "LOW": 0
+      },
+      "scanners_used": [
+        "checkov",
+        "tfsec"
+      ]
+    },
+    "should_block": true,
+    "severity_counts": {
+      "CRITICAL": 14,
+      "HIGH": 3
+    }
+  },
+  {
+    "timestamp": "2025-03-21T14:08:47.879678",
+    "repository": "unknown",
+    "commit_sha": "unknown",
+    "github_actor": "unknown",
+    "summary": {
+      "total_issues": 17,
+      "severity_counts": {
+        "CRITICAL": 11,
+        "HIGH": 3,
+        "MEDIUM": 3,
+        "LOW": 0
+      },
+      "scanners_used": [
+        "checkov",
+        "tfsec"
+      ]
+    },
+    "should_block": true,
+    "severity_counts": {
+      "CRITICAL": 14,
+      "HIGH": 3
+    }
+  },
+  {
+    "timestamp": "2025-03-21T14:09:49.454708",
+    "repository": "unknown",
+    "commit_sha": "unknown",
+    "github_actor": "unknown",
+    "summary": {
+      "total_issues": 17,
+      "severity_counts": {
+        "CRITICAL": 11,
+        "HIGH": 3,
+        "MEDIUM": 3,
+        "LOW": 0
+      },
+      "scanners_used": [
+        "checkov",
+        "tfsec"
+      ]
+    },
+    "should_block": true,
+    "severity_counts": {
+      "CRITICAL": 14,
+      "HIGH": 3
+    }
+  },
+  {
+    "timestamp": "2025-03-21T14:11:26.309900",
+    "repository": "unknown",
+    "commit_sha": "unknown",
+    "github_actor": "unknown",
+    "summary": {
+      "total_issues": 17,
+      "severity_counts": {
+        "CRITICAL": 11,
+        "HIGH": 3,
+        "MEDIUM": 3,
+        "LOW": 0
+      },
+      "scanners_used": [
+        "checkov",
+        "tfsec"
+      ]
+    },
+    "should_block": true,
+    "severity_counts": {
+      "CRITICAL": 14,
+      "HIGH": 3
+    }
+  }
+]

@@ -1,0 +1,37 @@
+# 취약점 심각도 정의 및 임계값 설정
+severity_mapping:
+  # 스캐너 심각도에서 내부 심각도로 변환
+  checkov:
+    HIGH: CRITICAL
+    MEDIUM: HIGH
+    LOW: MEDIUM
+    INFO: LOW
+  tfsec:
+    HIGH: CRITICAL
+    MEDIUM: HIGH
+    LOW: MEDIUM
+    INFO: LOW
+
+# 심각도별 블로킹 규칙
+blocking_rules:
+  CRITICAL: true     # CRITICAL 심각도는 항상 워크플로우 블록
+  HIGH: false        # HIGH 심각도는 기본적으로 블록하지 않음
+  MEDIUM: false
+  LOW: false
+
+# 심각도별 문자열 표현
+severity_display:
+  CRITICAL: "심각"
+  HIGH: "높음"
+  MEDIUM: "중간"
+  LOW: "낮음"
+
+# AWS 서비스별 기본 심각도 (특정 유형의 리소스에 대한 중요도)
+aws_service_importance:
+  IAM: CRITICAL      # 자격 증명 및 접근 관리는 항상 CRITICAL
+  S3: HIGH           # S3 버킷 문제는 HIGH
+  RDS: HIGH          # 데이터베이스 서비스도 HIGH
+  EC2: MEDIUM
+  LAMBDA: MEDIUM
+  CLOUDFRONT: MEDIUM
+  DEFAULT: LOW       # 기타 서비스는 LOW

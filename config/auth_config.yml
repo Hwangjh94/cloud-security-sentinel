@@ -1,0 +1,30 @@
+# 인증 관련 설정
+authentication:
+  # 관리자 그룹
+  admin_groups:
+    - security-admins
+    - infrastructure-admins
+  
+  # 인증 시도 제한
+  max_attempts: 3
+  lockout_duration_minutes: 30
+  
+  # 패스워드 정책 (사원번호 입력 관련)
+  employee_id:
+    min_length: 5
+    max_length: 10
+    format_regex: "^[A-Z][0-9]{4,9}$"  # A로 시작하는 4-9자리 숫자
+    
+  # 세션 설정
+  session:
+    timeout_minutes: 60
+    
+  # 알림 설정
+  notification:
+    send_on_failed_auth: true
+    send_on_successful_auth: true
+    
+  # 로깅 설정
+  logging:
+    log_all_auth_attempts: true
+    log_file: "auth_attempts.log"

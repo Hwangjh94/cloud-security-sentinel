@@ -1,0 +1,56 @@
+# 알림 채널 설정
+notification:
+  # Slack 알림 설정
+  slack:
+    enabled: true
+    webhook_url_env: "SLACK_WEBHOOK_URL"  # 환경 변수 이름
+    channel: "#보안-알림"
+    username: "보안 감시자"
+    icon_emoji: ":lock:"
+    severity_levels:
+      - CRITICAL
+      - HIGH
+
+  # 이메일 알림 설정
+  email:
+    enabled: true
+    from_email: "security-sentinel@example.com"
+    smtp_server: "smtp.example.com"
+    smtp_port: 587
+    smtp_user_env: "EMAIL_USER"
+    smtp_pass_env: "EMAIL_PASS"
+    admin_emails:
+      - "security-admin@example.com"
+      - "devops-team@example.com"
+    severity_levels:
+      - CRITICAL
+
+  # GitHub 이슈 생성
+  github_issue:
+    enabled: true
+    severity_levels:
+      - CRITICAL
+      - HIGH
+    labels:
+      - "security"
+      - "vulnerability"
+
+# 알림 템플릿
+templates:
+  critical_subject: "[심각] AWS 보안 취약점 발견: {check_name}"
+  high_subject: "[경고] AWS 보안 취약점 발견: {check_name}"
+  medium_subject: "[주의] AWS 보안 취약점 발견: {check_name}"
+  
+  critical_body: |
+    심각한 보안 취약점이 발견되었습니다.
+    
+    - 취약점: {check_name}
+    - 파일: {file_path}
+    - 라인: {line_start}-{line_end}
+    - 리소스: {resource}
+    - NIST 컨트롤: {nist_control}
+    
+    해당 워크플로우가 자동으로 차단되었습니다.
+    관리자 승인이 필요합니다.
+    
+    문제 해결 가이드: {guideline}

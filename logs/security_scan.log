@@ -1,0 +1,1212 @@
+2025-03-21 11:49:59,011 - __main__ - INFO - Starting Terraform security scan...
+2025-03-21 11:49:59,011 - __main__ - INFO - Scan path: examples/safe
+2025-03-21 11:49:59,012 - __main__ - INFO - Looking for Terraform files in examples/safe
+2025-03-21 11:49:59,012 - __main__ - INFO - Using absolute path: C:\devops\cloud-security-sentinel\examples/safe
+2025-03-21 11:49:59,013 - __main__ - INFO - Found 1 Terraform files
+2025-03-21 11:49:59,013 - __main__ - INFO - Running Checkov scan...
+2025-03-21 11:49:59,018 - __main__ - ERROR - Error running Checkov: [WinError 2] 지정된 파일을 찾을 수 없습니다
+Traceback (most recent call last):
+  File "C:\devops\cloud-security-sentinel\src\run_security_scan.py", line 69, in run_checkov_scan
+    result = subprocess.run(cmd, capture_output=True, text=True, check=False)
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 556, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1038, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1550, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] 지정된 파일을 찾을 수 없습니다
+2025-03-21 11:49:59,025 - __main__ - INFO - Running tfsec scan...
+2025-03-21 11:49:59,025 - __main__ - INFO - Scanning directory: C:\devops\cloud-security-sentinel\examples/safe
+2025-03-21 11:49:59,667 - __main__ - INFO - tfsec scan completed with 13 findings
+2025-03-21 11:49:59,668 - __main__ - INFO - Analyzing vulnerabilities against security standards...
+2025-03-21 11:49:59,676 - src.terraform_analyzer.security_standards - WARNING - 설정 파일을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 설정을 사용합니다.
+2025-03-21 11:49:59,679 - src.terraform_analyzer.security_standards - WARNING - 설정 파일을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 설정을 사용합니다.
+2025-03-21 11:49:59,680 - src.terraform_analyzer.security_standards - WARNING - 설정 파일을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 설정을 사용합니다.
+2025-03-21 11:49:59,680 - __main__ - INFO - Grading vulnerabilities based on NIST 800-53...
+2025-03-21 11:49:59,681 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:49:59,682 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:49:59,683 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:49:59,684 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:49:59,685 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:49:59,686 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:49:59,687 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:49:59,688 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:49:59,689 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:49:59,690 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:49:59,694 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:49:59,695 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:49:59,696 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:49:59,699 - __main__ - INFO - Scan results saved to C:\devops\cloud-security-sentinel\scan-results.json
+2025-03-21 11:49:59,701 - src.storage.state_manager - INFO - 스캔 이력이 성공적으로 저장되었습니다.
+2025-03-21 11:49:59,702 - __main__ - WARNING - CRITICAL security issues detected!
+2025-03-21 11:49:59,713 - src.notification.notification_manager - WARNING - 알림 설정을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 2: illegal multibyte sequence. 기본 설정을 사용합니다.
+2025-03-21 11:49:59,714 - src.notification.notification_manager - INFO - 알림 전송 시작: 총 13개의 취약점
+2025-03-21 11:49:59,715 - src.notification.notification_manager - INFO - Slack 알림이 비활성화되어 있습니다.
+2025-03-21 11:49:59,715 - src.notification.notification_manager - INFO - 이메일 알림이 비활성화되어 있습니다.
+2025-03-21 11:49:59,715 - src.notification.notification_manager - ERROR - GitHub 토큰이 환경 변수에 설정되지 않았습니다.
+2025-03-21 11:49:59,716 - src.notification.notification_manager - INFO - 알림 전송 결과: Slack=False, 이메일=False, GitHub=False
+2025-03-21 11:50:22,060 - __main__ - INFO - Starting Terraform security scan...
+2025-03-21 11:50:22,061 - __main__ - INFO - Scan path: examples/vulnerable
+2025-03-21 11:50:22,061 - __main__ - INFO - Looking for Terraform files in examples/vulnerable
+2025-03-21 11:50:22,062 - __main__ - INFO - Using absolute path: C:\devops\cloud-security-sentinel\examples/vulnerable
+2025-03-21 11:50:22,062 - __main__ - INFO - Found 1 Terraform files
+2025-03-21 11:50:22,063 - __main__ - INFO - Running Checkov scan...
+2025-03-21 11:50:22,067 - __main__ - ERROR - Error running Checkov: [WinError 2] 지정된 파일을 찾을 수 없습니다
+Traceback (most recent call last):
+  File "C:\devops\cloud-security-sentinel\src\run_security_scan.py", line 69, in run_checkov_scan
+    result = subprocess.run(cmd, capture_output=True, text=True, check=False)
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 556, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1038, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1550, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] 지정된 파일을 찾을 수 없습니다
+2025-03-21 11:50:22,073 - __main__ - INFO - Running tfsec scan...
+2025-03-21 11:50:22,074 - __main__ - INFO - Scanning directory: C:\devops\cloud-security-sentinel\examples/vulnerable
+2025-03-21 11:50:22,662 - __main__ - INFO - tfsec scan completed with 33 findings
+2025-03-21 11:50:22,663 - __main__ - INFO - Analyzing vulnerabilities against security standards...
+2025-03-21 11:50:22,663 - src.terraform_analyzer.security_standards - WARNING - 설정 파일을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 설정을 사용합니다.
+2025-03-21 11:50:22,664 - src.terraform_analyzer.security_standards - WARNING - 설정 파일을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 설정을 사용합니다.
+2025-03-21 11:50:22,665 - src.terraform_analyzer.security_standards - WARNING - 설정 파일을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 설정을 사용합니다.
+2025-03-21 11:50:22,666 - __main__ - INFO - Grading vulnerabilities based on NIST 800-53...
+2025-03-21 11:50:22,666 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:50:22,667 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:50:22,667 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:50:22,668 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:50:22,669 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:50:22,670 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:50:22,671 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:50:22,672 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:50:22,672 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:50:22,673 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:50:22,676 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:50:22,677 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:50:22,678 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:50:22,679 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:50:22,680 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:50:22,681 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:50:22,682 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:50:22,682 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:50:22,683 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:50:22,684 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:50:22,686 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:50:22,688 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:50:22,689 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:50:22,689 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:50:22,690 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:50:22,691 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:50:22,692 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:50:22,692 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:50:22,693 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:50:22,694 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:50:22,695 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:50:22,695 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:50:22,696 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:50:22,701 - __main__ - INFO - Scan results saved to C:\devops\cloud-security-sentinel\scan-results.json
+2025-03-21 11:50:22,712 - src.storage.state_manager - INFO - 스캔 이력이 성공적으로 저장되었습니다.
+2025-03-21 11:50:22,713 - __main__ - WARNING - CRITICAL security issues detected!
+2025-03-21 11:50:22,714 - src.notification.notification_manager - WARNING - 알림 설정을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 2: illegal multibyte sequence. 기본 설정을 사용합니다.
+2025-03-21 11:50:22,714 - src.notification.notification_manager - INFO - 알림 전송 시작: 총 33개의 취약점
+2025-03-21 11:50:22,715 - src.notification.notification_manager - INFO - Slack 알림이 비활성화되어 있습니다.
+2025-03-21 11:50:22,715 - src.notification.notification_manager - INFO - 이메일 알림이 비활성화되어 있습니다.
+2025-03-21 11:50:22,715 - src.notification.notification_manager - ERROR - GitHub 토큰이 환경 변수에 설정되지 않았습니다.
+2025-03-21 11:50:22,716 - src.notification.notification_manager - INFO - 알림 전송 결과: Slack=False, 이메일=False, GitHub=False
+2025-03-21 11:52:11,399 - __main__ - INFO - Starting Terraform security scan...
+2025-03-21 11:52:11,400 - __main__ - INFO - Scan path: examples/safe
+2025-03-21 11:52:11,400 - __main__ - INFO - Looking for Terraform files in examples/safe
+2025-03-21 11:52:11,400 - __main__ - INFO - Using absolute path: C:\devops\cloud-security-sentinel\examples/safe
+2025-03-21 11:52:11,401 - __main__ - INFO - Found 1 Terraform files
+2025-03-21 11:52:11,401 - __main__ - INFO - Running Checkov scan...
+2025-03-21 11:52:11,406 - __main__ - ERROR - Error running Checkov: [WinError 2] 지정된 파일을 찾을 수 없습니다
+Traceback (most recent call last):
+  File "C:\devops\cloud-security-sentinel\src\run_security_scan.py", line 69, in run_checkov_scan
+    result = subprocess.run(cmd, capture_output=True, text=True, check=False)
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 556, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1038, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1550, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] 지정된 파일을 찾을 수 없습니다
+2025-03-21 11:52:11,413 - __main__ - INFO - Running tfsec scan...
+2025-03-21 11:52:11,413 - __main__ - INFO - Scanning directory: C:\devops\cloud-security-sentinel\examples/safe
+2025-03-21 11:52:11,990 - __main__ - INFO - tfsec scan completed with 13 findings
+2025-03-21 11:52:11,991 - __main__ - INFO - Analyzing vulnerabilities against security standards...
+2025-03-21 11:52:11,991 - src.terraform_analyzer.security_standards - WARNING - 설정 파일을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 설정을 사용합니다.
+2025-03-21 11:52:11,993 - src.terraform_analyzer.security_standards - WARNING - 설정 파일을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 설정을 사용합니다.
+2025-03-21 11:52:11,993 - src.terraform_analyzer.security_standards - WARNING - 설정 파일을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 설정을 사용합니다.
+2025-03-21 11:52:11,994 - __main__ - INFO - Grading vulnerabilities based on NIST 800-53...
+2025-03-21 11:52:11,994 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:52:11,995 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:52:11,996 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:52:11,997 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:52:11,998 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:52:11,999 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:52:12,000 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:52:12,000 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:52:12,001 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:52:12,002 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:52:12,005 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:52:12,006 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:52:12,008 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:52:12,011 - __main__ - INFO - Scan results saved to C:\devops\cloud-security-sentinel\scan-results.json
+2025-03-21 11:52:12,024 - src.storage.state_manager - INFO - 스캔 이력이 성공적으로 저장되었습니다.
+2025-03-21 11:52:12,025 - __main__ - WARNING - CRITICAL security issues detected!
+2025-03-21 11:52:12,026 - src.notification.notification_manager - WARNING - 알림 설정을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 2: illegal multibyte sequence. 기본 설정을 사용합니다.
+2025-03-21 11:52:12,026 - src.notification.notification_manager - INFO - 알림 전송 시작: 총 13개의 취약점
+2025-03-21 11:52:12,027 - src.notification.notification_manager - INFO - Slack 알림이 비활성화되어 있습니다.
+2025-03-21 11:52:12,027 - src.notification.notification_manager - INFO - 이메일 알림이 비활성화되어 있습니다.
+2025-03-21 11:52:12,028 - src.notification.notification_manager - ERROR - GitHub 토큰이 환경 변수에 설정되지 않았습니다.
+2025-03-21 11:52:12,028 - src.notification.notification_manager - INFO - 알림 전송 결과: Slack=False, 이메일=False, GitHub=False
+2025-03-21 11:53:00,048 - __main__ - INFO - Starting Terraform security scan...
+2025-03-21 11:53:00,048 - __main__ - INFO - Scan path: examples/safe
+2025-03-21 11:53:00,049 - __main__ - INFO - Looking for Terraform files in examples/safe
+2025-03-21 11:53:00,049 - __main__ - INFO - Using absolute path: C:\devops\cloud-security-sentinel\examples/safe
+2025-03-21 11:53:00,050 - __main__ - INFO - Found 1 Terraform files
+2025-03-21 11:53:00,050 - __main__ - INFO - Running Checkov scan...
+2025-03-21 11:53:00,055 - __main__ - ERROR - Error running Checkov: [WinError 2] 지정된 파일을 찾을 수 없습니다
+Traceback (most recent call last):
+  File "C:\devops\cloud-security-sentinel\src\run_security_scan.py", line 69, in run_checkov_scan
+    result = subprocess.run(cmd, capture_output=True, text=True, check=False)
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 556, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1038, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1550, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] 지정된 파일을 찾을 수 없습니다
+2025-03-21 11:53:00,061 - __main__ - INFO - Running tfsec scan...
+2025-03-21 11:53:00,061 - __main__ - INFO - Scanning directory: C:\devops\cloud-security-sentinel\examples/safe
+2025-03-21 11:53:00,633 - __main__ - INFO - tfsec scan completed with 13 findings
+2025-03-21 11:53:00,633 - __main__ - INFO - Analyzing vulnerabilities against security standards...
+2025-03-21 11:53:00,634 - src.terraform_analyzer.security_standards - WARNING - 설정 파일을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 설정을 사용합니다.
+2025-03-21 11:53:00,635 - src.terraform_analyzer.security_standards - WARNING - 설정 파일을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 설정을 사용합니다.
+2025-03-21 11:53:00,636 - src.terraform_analyzer.security_standards - WARNING - 설정 파일을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 설정을 사용합니다.
+2025-03-21 11:53:00,636 - __main__ - INFO - Grading vulnerabilities based on NIST 800-53...
+2025-03-21 11:53:00,637 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:53:00,637 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:53:00,638 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:53:00,639 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:53:00,640 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:53:00,640 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:53:00,642 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:53:00,642 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:53:00,643 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:53:00,646 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:53:00,647 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:53:00,648 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:53:00,649 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:53:00,652 - __main__ - INFO - Scan results saved to C:\devops\cloud-security-sentinel\scan-results.json
+2025-03-21 11:53:00,664 - src.storage.state_manager - INFO - 스캔 이력이 성공적으로 저장되었습니다.
+2025-03-21 11:53:00,665 - __main__ - WARNING - CRITICAL security issues detected!
+2025-03-21 11:53:00,666 - src.notification.notification_manager - WARNING - 알림 설정을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 2: illegal multibyte sequence. 기본 설정을 사용합니다.
+2025-03-21 11:53:00,667 - src.notification.notification_manager - INFO - 알림 전송 시작: 총 13개의 취약점
+2025-03-21 11:53:00,668 - src.notification.notification_manager - INFO - Slack 알림이 비활성화되어 있습니다.
+2025-03-21 11:53:00,668 - src.notification.notification_manager - INFO - 이메일 알림이 비활성화되어 있습니다.
+2025-03-21 11:53:00,669 - src.notification.notification_manager - ERROR - GitHub 토큰이 환경 변수에 설정되지 않았습니다.
+2025-03-21 11:53:00,669 - src.notification.notification_manager - INFO - 알림 전송 결과: Slack=False, 이메일=False, GitHub=False
+2025-03-21 11:58:55,172 - __main__ - INFO - Starting Terraform security scan...
+2025-03-21 11:58:55,173 - __main__ - INFO - Scan path: examples/safe
+2025-03-21 11:58:55,173 - __main__ - INFO - Looking for Terraform files in examples/safe
+2025-03-21 11:58:55,173 - __main__ - INFO - Using absolute path: C:\devops\cloud-security-sentinel\examples/safe
+2025-03-21 11:58:55,174 - __main__ - INFO - Found 1 Terraform files
+2025-03-21 11:58:55,174 - __main__ - INFO - Running Checkov scan...
+2025-03-21 11:58:55,179 - __main__ - ERROR - Error running Checkov: [WinError 2] 지정된 파일을 찾을 수 없습니다
+Traceback (most recent call last):
+  File "C:\devops\cloud-security-sentinel\src\run_security_scan.py", line 69, in run_checkov_scan
+    result = subprocess.run(cmd, capture_output=True, text=True, check=False)
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 556, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1038, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1550, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] 지정된 파일을 찾을 수 없습니다
+2025-03-21 11:58:55,188 - __main__ - INFO - Running tfsec scan...
+2025-03-21 11:58:55,188 - __main__ - INFO - Scanning directory: C:\devops\cloud-security-sentinel\examples/safe
+2025-03-21 11:58:55,810 - __main__ - INFO - tfsec scan completed with 13 findings
+2025-03-21 11:58:55,810 - __main__ - INFO - Analyzing vulnerabilities against security standards...
+2025-03-21 11:58:55,818 - __main__ - INFO - Grading vulnerabilities based on NIST 800-53...
+2025-03-21 11:58:55,819 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:58:55,820 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:58:55,821 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:58:55,822 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:58:55,823 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:58:55,824 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:58:55,825 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:58:55,826 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:58:55,827 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:58:55,827 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:58:55,828 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:58:55,829 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:58:55,830 - src.terraform_analyzer.nist_grader - WARNING - 차단 규칙을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 8: illegal multibyte sequence. 기본 규칙을 사용합니다.
+2025-03-21 11:58:55,833 - __main__ - INFO - Scan results saved to C:\devops\cloud-security-sentinel\scan-results.json
+2025-03-21 11:58:55,845 - src.storage.state_manager - INFO - 스캔 이력이 성공적으로 저장되었습니다.
+2025-03-21 11:58:55,846 - __main__ - WARNING - CRITICAL security issues detected!
+2025-03-21 11:58:55,847 - src.notification.notification_manager - WARNING - 알림 설정을 로드하는 중 오류 발생: 'cp949' codec can't decode byte 0xec in position 2: illegal multibyte sequence. 기본 설정을 사용합니다.
+2025-03-21 11:58:55,847 - src.notification.notification_manager - INFO - 알림 전송 시작: 총 13개의 취약점
+2025-03-21 11:58:55,848 - src.notification.notification_manager - INFO - Slack 알림이 비활성화되어 있습니다.
+2025-03-21 11:58:55,848 - src.notification.notification_manager - INFO - 이메일 알림이 비활성화되어 있습니다.
+2025-03-21 11:58:55,849 - src.notification.notification_manager - ERROR - GitHub 토큰이 환경 변수에 설정되지 않았습니다.
+2025-03-21 11:58:55,849 - src.notification.notification_manager - INFO - 알림 전송 결과: Slack=False, 이메일=False, GitHub=False
+2025-03-21 12:04:09,866 - __main__ - INFO - Starting Terraform security scan...
+2025-03-21 12:04:09,866 - __main__ - INFO - Scan path: examples/safe
+2025-03-21 12:04:09,867 - __main__ - INFO - Looking for Terraform files in examples/safe
+2025-03-21 12:04:09,867 - __main__ - INFO - Using absolute path: C:\devops\cloud-security-sentinel\examples/safe
+2025-03-21 12:04:09,868 - __main__ - INFO - Found 1 Terraform files
+2025-03-21 12:04:09,868 - __main__ - INFO - Running Checkov scan...
+2025-03-21 12:04:09,875 - __main__ - ERROR - Error running Checkov: [WinError 2] 지정된 파일을 찾을 수 없습니다
+Traceback (most recent call last):
+  File "C:\devops\cloud-security-sentinel\src\run_security_scan.py", line 69, in run_checkov_scan
+    result = subprocess.run(cmd, capture_output=True, text=True, check=False)
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 556, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1038, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1550, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] 지정된 파일을 찾을 수 없습니다
+2025-03-21 12:04:09,885 - __main__ - INFO - Running tfsec scan...
+2025-03-21 12:04:09,886 - __main__ - INFO - Scanning directory: C:\devops\cloud-security-sentinel\examples/safe
+2025-03-21 12:04:10,466 - __main__ - INFO - tfsec scan completed with 13 findings
+2025-03-21 12:04:10,466 - __main__ - INFO - Analyzing vulnerabilities against security standards...
+2025-03-21 12:04:10,474 - __main__ - INFO - Grading vulnerabilities based on NIST 800-53...
+2025-03-21 12:04:10,508 - __main__ - INFO - Scan results saved to C:\devops\cloud-security-sentinel\scan-results.json
+2025-03-21 12:04:10,520 - src.storage.state_manager - INFO - 스캔 이력이 성공적으로 저장되었습니다.
+2025-03-21 12:04:10,520 - __main__ - WARNING - CRITICAL security issues detected!
+2025-03-21 12:04:10,524 - src.notification.notification_manager - INFO - 알림 전송 시작: 총 13개의 취약점
+2025-03-21 12:04:10,524 - src.notification.notification_manager - ERROR - Slack 웹훅 URL이 환경 변수(SLACK_WEBHOOK_URL)에 설정되지 않았습니다.
+2025-03-21 12:04:10,525 - src.notification.notification_manager - ERROR - SMTP 자격 증명이 환경 변수에 설정되지 않았습니다.
+2025-03-21 12:04:10,525 - src.notification.notification_manager - ERROR - GitHub 토큰이 환경 변수에 설정되지 않았습니다.
+2025-03-21 12:04:10,526 - src.notification.notification_manager - INFO - 알림 전송 결과: Slack=False, 이메일=False, GitHub=False
+2025-03-21 12:06:49,331 - __main__ - INFO - Starting Terraform security scan...
+2025-03-21 12:06:49,332 - __main__ - INFO - Scan path: examples/safe
+2025-03-21 12:06:49,332 - __main__ - INFO - Looking for Terraform files in examples/safe
+2025-03-21 12:06:49,332 - __main__ - INFO - Using absolute path: C:\devops\cloud-security-sentinel\examples/safe
+2025-03-21 12:06:49,333 - __main__ - INFO - Found 1 Terraform files
+2025-03-21 12:06:49,333 - __main__ - INFO - Running Checkov using subprocess...
+2025-03-21 12:06:49,338 - __main__ - WARNING - Failed to run Checkov as subprocess: [WinError 2] 지정된 파일을 찾을 수 없습니다
+2025-03-21 12:06:49,339 - __main__ - INFO - Trying to run Checkov using Python API...
+2025-03-21 12:06:53,518 [MainThread  ] [WARNI]  Checkov module found but 'run' function not available
+2025-03-21 12:06:53,519 [MainThread  ] [WARNI]  All attempts to run Checkov failed. Proceeding with tfsec only.
+2025-03-21 12:06:54,156 [MainThread  ] [WARNI]  CRITICAL security issues detected!
+2025-03-21 12:06:54,160 [MainThread  ] [ERROR]  Slack 웹훅 URL이 환경 변수(SLACK_WEBHOOK_URL)에 설정되지 않았습니다.
+2025-03-21 12:06:54,160 [MainThread  ] [ERROR]  SMTP 자격 증명이 환경 변수에 설정되지 않았습니다.
+2025-03-21 12:06:54,160 [MainThread  ] [ERROR]  GitHub 토큰이 환경 변수에 설정되지 않았습니다.
+2025-03-21 12:09:38,895 - __main__ - INFO - Starting Terraform security scan...
+2025-03-21 12:09:38,896 - __main__ - INFO - Scan path: examples/safe
+2025-03-21 12:09:38,896 - __main__ - INFO - Looking for Terraform files in examples/safe
+2025-03-21 12:09:38,896 - __main__ - INFO - Using absolute path: C:\devops\cloud-security-sentinel\examples/safe
+2025-03-21 12:09:38,897 - __main__ - INFO - Found 1 Terraform files
+2025-03-21 12:09:38,897 - __main__ - INFO - Running Checkov scan...
+2025-03-21 12:09:38,902 - __main__ - ERROR - Error running Checkov: [WinError 2] 지정된 파일을 찾을 수 없습니다
+Traceback (most recent call last):
+  File "C:\devops\cloud-security-sentinel\src\run_security_scan.py", line 69, in run_checkov_scan
+    result = subprocess.run(cmd, capture_output=True, text=True, check=False)
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 556, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1038, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1550, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] 지정된 파일을 찾을 수 없습니다
+2025-03-21 12:09:38,908 - __main__ - INFO - Running tfsec scan...
+2025-03-21 12:09:38,909 - __main__ - INFO - Scanning directory: C:\devops\cloud-security-sentinel\examples/safe
+2025-03-21 12:09:39,482 - __main__ - INFO - tfsec scan completed with 13 findings
+2025-03-21 12:09:39,483 - __main__ - INFO - Analyzing vulnerabilities against security standards...
+2025-03-21 12:09:39,490 - __main__ - INFO - Grading vulnerabilities based on NIST 800-53...
+2025-03-21 12:09:39,522 - __main__ - INFO - Scan results saved to C:\devops\cloud-security-sentinel\scan-results.json
+2025-03-21 12:09:39,534 - src.storage.state_manager - INFO - 스캔 이력이 성공적으로 저장되었습니다.
+2025-03-21 12:09:39,534 - __main__ - WARNING - CRITICAL security issues detected!
+2025-03-21 12:09:39,537 - src.notification.notification_manager - INFO - 알림 전송 시작: 총 13개의 취약점
+2025-03-21 12:09:39,538 - src.notification.notification_manager - ERROR - Slack 웹훅 URL이 환경 변수(SLACK_WEBHOOK_URL)에 설정되지 않았습니다.
+2025-03-21 12:09:39,538 - src.notification.notification_manager - ERROR - SMTP 자격 증명이 환경 변수에 설정되지 않았습니다.
+2025-03-21 12:09:39,539 - src.notification.notification_manager - ERROR - GitHub 토큰이 환경 변수에 설정되지 않았습니다.
+2025-03-21 12:09:39,539 - src.notification.notification_manager - INFO - 알림 전송 결과: Slack=False, 이메일=False, GitHub=False
+2025-03-21 12:11:15,666 - __main__ - INFO - Starting Terraform security scan...
+2025-03-21 12:11:15,667 - __main__ - INFO - Scan path: examples/safe
+2025-03-21 12:11:15,667 - __main__ - INFO - Looking for Terraform files in examples/safe
+2025-03-21 12:11:15,667 - __main__ - INFO - Using absolute path: C:\devops\cloud-security-sentinel\examples/safe
+2025-03-21 12:11:15,668 - __main__ - INFO - Found 1 Terraform files
+2025-03-21 12:11:15,668 - __main__ - INFO - Running Checkov scan...
+2025-03-21 12:11:15,674 - __main__ - ERROR - Error running Checkov: [WinError 2] 지정된 파일을 찾을 수 없습니다
+Traceback (most recent call last):
+  File "C:\devops\cloud-security-sentinel\src\run_security_scan.py", line 69, in run_checkov_scan
+    result = subprocess.run(cmd, capture_output=True, text=True, check=False)
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 556, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1038, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1550, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] 지정된 파일을 찾을 수 없습니다
+2025-03-21 12:11:15,681 - __main__ - INFO - Running tfsec scan...
+2025-03-21 12:11:15,681 - __main__ - INFO - Scanning directory: C:\devops\cloud-security-sentinel\examples/safe
+2025-03-21 12:11:16,459 - __main__ - INFO - tfsec scan completed with 10 findings
+2025-03-21 12:11:16,460 - __main__ - INFO - Analyzing vulnerabilities against security standards...
+2025-03-21 12:11:16,467 - __main__ - INFO - Grading vulnerabilities based on NIST 800-53...
+2025-03-21 12:11:16,494 - __main__ - INFO - Scan results saved to C:\devops\cloud-security-sentinel\scan-results.json
+2025-03-21 12:11:16,506 - src.storage.state_manager - INFO - 스캔 이력이 성공적으로 저장되었습니다.
+2025-03-21 12:11:16,507 - __main__ - WARNING - CRITICAL security issues detected!
+2025-03-21 12:11:16,510 - src.notification.notification_manager - INFO - 알림 전송 시작: 총 10개의 취약점
+2025-03-21 12:11:16,510 - src.notification.notification_manager - ERROR - Slack 웹훅 URL이 환경 변수(SLACK_WEBHOOK_URL)에 설정되지 않았습니다.
+2025-03-21 12:11:16,511 - src.notification.notification_manager - ERROR - SMTP 자격 증명이 환경 변수에 설정되지 않았습니다.
+2025-03-21 12:11:16,512 - src.notification.notification_manager - ERROR - GitHub 토큰이 환경 변수에 설정되지 않았습니다.
+2025-03-21 12:11:16,512 - src.notification.notification_manager - INFO - 알림 전송 결과: Slack=False, 이메일=False, GitHub=False
+2025-03-21 12:16:42,137 - __main__ - INFO - Starting Terraform security scan...
+2025-03-21 12:16:42,138 - __main__ - INFO - Scan path: examples/safe
+2025-03-21 12:16:42,138 - __main__ - INFO - Looking for Terraform files in examples/safe
+2025-03-21 12:16:42,138 - __main__ - INFO - Using absolute path: C:\devops\cloud-security-sentinel\examples/safe
+2025-03-21 12:16:42,139 - __main__ - INFO - Found 1 Terraform files
+2025-03-21 12:16:42,139 - __main__ - INFO - Running Checkov scan...
+2025-03-21 12:16:42,145 - __main__ - ERROR - Error running Checkov: [WinError 2] 지정된 파일을 찾을 수 없습니다
+Traceback (most recent call last):
+  File "C:\devops\cloud-security-sentinel\src\run_security_scan.py", line 69, in run_checkov_scan
+    result = subprocess.run(cmd, capture_output=True, text=True, check=False)
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 556, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1038, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1550, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] 지정된 파일을 찾을 수 없습니다
+2025-03-21 12:16:42,152 - __main__ - INFO - Running tfsec scan...
+2025-03-21 12:16:42,153 - __main__ - INFO - Scanning directory: C:\devops\cloud-security-sentinel\examples/safe
+2025-03-21 12:16:42,734 - __main__ - INFO - tfsec scan completed with 10 findings
+2025-03-21 12:16:42,735 - __main__ - INFO - Analyzing vulnerabilities against security standards...
+2025-03-21 12:16:42,743 - __main__ - INFO - Grading vulnerabilities based on NIST 800-53...
+2025-03-21 12:16:42,768 - __main__ - INFO - Scan results saved to C:\devops\cloud-security-sentinel\scan-results.json
+2025-03-21 12:16:42,770 - src.storage.state_manager - INFO - 스캔 이력이 성공적으로 저장되었습니다.
+2025-03-21 12:16:42,771 - __main__ - WARNING - CRITICAL security issues detected!
+2025-03-21 12:16:42,774 - src.notification.notification_manager - INFO - 알림 전송 시작: 총 10개의 취약점
+2025-03-21 12:16:42,774 - src.notification.notification_manager - ERROR - Slack 웹훅 URL이 환경 변수(SLACK_WEBHOOK_URL)에 설정되지 않았습니다.
+2025-03-21 12:16:42,775 - src.notification.notification_manager - ERROR - SMTP 자격 증명이 환경 변수에 설정되지 않았습니다.
+2025-03-21 12:16:42,775 - src.notification.notification_manager - ERROR - GitHub 토큰이 환경 변수에 설정되지 않았습니다.
+2025-03-21 12:16:42,776 - src.notification.notification_manager - INFO - 알림 전송 결과: Slack=False, 이메일=False, GitHub=False
+2025-03-21 12:19:19,802 - __main__ - INFO - Starting Terraform security scan...
+2025-03-21 12:19:19,803 - __main__ - INFO - Scan path: examples/safe
+2025-03-21 12:19:19,803 - __main__ - INFO - Looking for Terraform files in examples/safe
+2025-03-21 12:19:19,804 - __main__ - INFO - Using absolute path: C:\devops\cloud-security-sentinel\examples/safe
+2025-03-21 12:19:19,804 - __main__ - INFO - Found 1 Terraform files
+2025-03-21 12:19:19,804 - __main__ - INFO - Running Checkov scan...
+2025-03-21 12:19:19,810 - __main__ - ERROR - Error running Checkov: [WinError 2] 지정된 파일을 찾을 수 없습니다
+Traceback (most recent call last):
+  File "C:\devops\cloud-security-sentinel\src\run_security_scan.py", line 69, in run_checkov_scan
+    result = subprocess.run(cmd, capture_output=True, text=True, check=False)
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 556, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1038, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1550, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] 지정된 파일을 찾을 수 없습니다
+2025-03-21 12:19:19,816 - __main__ - INFO - Running tfsec scan...
+2025-03-21 12:19:19,816 - __main__ - INFO - Scanning directory: C:\devops\cloud-security-sentinel\examples/safe
+2025-03-21 12:19:20,413 - __main__ - INFO - tfsec scan completed with 9 findings
+2025-03-21 12:19:20,413 - __main__ - INFO - Analyzing vulnerabilities against security standards...
+2025-03-21 12:19:20,421 - __main__ - INFO - Grading vulnerabilities based on NIST 800-53...
+2025-03-21 12:19:20,447 - __main__ - INFO - Scan results saved to C:\devops\cloud-security-sentinel\scan-results.json
+2025-03-21 12:19:20,458 - src.storage.state_manager - INFO - 스캔 이력이 성공적으로 저장되었습니다.
+2025-03-21 12:19:20,458 - __main__ - WARNING - CRITICAL security issues detected!
+2025-03-21 12:19:20,463 - src.notification.notification_manager - INFO - 알림 전송 시작: 총 9개의 취약점
+2025-03-21 12:19:20,464 - src.notification.notification_manager - ERROR - Slack 웹훅 URL이 환경 변수(SLACK_WEBHOOK_URL)에 설정되지 않았습니다.
+2025-03-21 12:19:20,464 - src.notification.notification_manager - ERROR - SMTP 자격 증명이 환경 변수에 설정되지 않았습니다.
+2025-03-21 12:19:20,464 - src.notification.notification_manager - ERROR - GitHub 토큰이 환경 변수에 설정되지 않았습니다.
+2025-03-21 12:19:20,465 - src.notification.notification_manager - INFO - 알림 전송 결과: Slack=False, 이메일=False, GitHub=False
+2025-03-21 12:19:29,117 - __main__ - INFO - Starting Terraform security scan...
+2025-03-21 12:19:29,117 - __main__ - INFO - Scan path: examples/safe
+2025-03-21 12:19:29,118 - __main__ - INFO - Looking for Terraform files in examples/safe
+2025-03-21 12:19:29,118 - __main__ - INFO - Using absolute path: C:\devops\cloud-security-sentinel\examples/safe
+2025-03-21 12:19:29,119 - __main__ - INFO - Found 1 Terraform files
+2025-03-21 12:19:29,119 - __main__ - INFO - Running Checkov scan...
+2025-03-21 12:19:29,128 - __main__ - ERROR - Error running Checkov: [WinError 2] 지정된 파일을 찾을 수 없습니다
+Traceback (most recent call last):
+  File "C:\devops\cloud-security-sentinel\src\run_security_scan.py", line 69, in run_checkov_scan
+    result = subprocess.run(cmd, capture_output=True, text=True, check=False)
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 556, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1038, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1550, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] 지정된 파일을 찾을 수 없습니다
+2025-03-21 12:19:29,138 - __main__ - INFO - Running tfsec scan...
+2025-03-21 12:19:29,141 - __main__ - INFO - Scanning directory: C:\devops\cloud-security-sentinel\examples/safe
+2025-03-21 12:19:29,733 - __main__ - INFO - tfsec scan completed with 9 findings
+2025-03-21 12:19:29,733 - __main__ - INFO - Analyzing vulnerabilities against security standards...
+2025-03-21 12:19:29,741 - __main__ - INFO - Grading vulnerabilities based on NIST 800-53...
+2025-03-21 12:19:29,766 - __main__ - INFO - Scan results saved to C:\devops\cloud-security-sentinel\scan-results.json
+2025-03-21 12:19:29,778 - src.storage.state_manager - INFO - 스캔 이력이 성공적으로 저장되었습니다.
+2025-03-21 12:19:29,779 - __main__ - WARNING - CRITICAL security issues detected!
+2025-03-21 12:19:29,782 - src.notification.notification_manager - INFO - 알림 전송 시작: 총 9개의 취약점
+2025-03-21 12:19:29,782 - src.notification.notification_manager - ERROR - Slack 웹훅 URL이 환경 변수(SLACK_WEBHOOK_URL)에 설정되지 않았습니다.
+2025-03-21 12:19:29,783 - src.notification.notification_manager - ERROR - SMTP 자격 증명이 환경 변수에 설정되지 않았습니다.
+2025-03-21 12:19:29,783 - src.notification.notification_manager - ERROR - GitHub 토큰이 환경 변수에 설정되지 않았습니다.
+2025-03-21 12:19:29,784 - src.notification.notification_manager - INFO - 알림 전송 결과: Slack=False, 이메일=False, GitHub=False
+2025-03-21 12:21:19,256 - __main__ - INFO - Starting Terraform security scan...
+2025-03-21 12:21:19,257 - __main__ - INFO - Scan path: examples/safe
+2025-03-21 12:21:19,257 - __main__ - INFO - Looking for Terraform files in examples/safe
+2025-03-21 12:21:19,258 - __main__ - INFO - Using absolute path: C:\devops\cloud-security-sentinel\examples/safe
+2025-03-21 12:21:19,258 - __main__ - INFO - Found 1 Terraform files
+2025-03-21 12:21:19,259 - __main__ - INFO - Running Checkov scan...
+2025-03-21 12:21:19,264 - __main__ - ERROR - Error running Checkov: [WinError 2] 지정된 파일을 찾을 수 없습니다
+Traceback (most recent call last):
+  File "C:\devops\cloud-security-sentinel\src\run_security_scan.py", line 69, in run_checkov_scan
+    result = subprocess.run(cmd, capture_output=True, text=True, check=False)
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 556, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1038, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1550, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] 지정된 파일을 찾을 수 없습니다
+2025-03-21 12:21:19,270 - __main__ - INFO - Running tfsec scan...
+2025-03-21 12:21:19,271 - __main__ - INFO - Scanning directory: C:\devops\cloud-security-sentinel\examples/safe
+2025-03-21 12:21:19,838 - __main__ - INFO - tfsec scan completed with 0 findings
+2025-03-21 12:21:19,838 - __main__ - INFO - Analyzing vulnerabilities against security standards...
+2025-03-21 12:21:19,845 - __main__ - INFO - Grading vulnerabilities based on NIST 800-53...
+2025-03-21 12:21:19,846 - __main__ - INFO - Scan results saved to C:\devops\cloud-security-sentinel\scan-results.json
+2025-03-21 12:21:19,859 - src.storage.state_manager - INFO - 스캔 이력이 성공적으로 저장되었습니다.
+2025-03-21 12:21:19,859 - __main__ - INFO - No critical security issues detected.
+2025-03-21 12:21:19,863 - src.notification.notification_manager - INFO - 알림을 보낼 취약점이 없습니다.
+2025-03-21 12:28:15,742 - __main__ - INFO - Starting Terraform security scan...
+2025-03-21 12:28:15,742 - __main__ - INFO - Scan path: examples/safe
+2025-03-21 12:28:15,743 - __main__ - INFO - Looking for Terraform files in examples/safe
+2025-03-21 12:28:15,743 - __main__ - INFO - Using absolute path: C:\devops\cloud-security-sentinel\examples/safe
+2025-03-21 12:28:15,744 - __main__ - INFO - Found 1 Terraform files
+2025-03-21 12:28:15,744 - __main__ - INFO - Running Checkov scan...
+2025-03-21 12:28:24,844 - __main__ - ERROR - Checkov scan failed: 2025-03-21 12:28:24,224 [MainThread  ] [ERROR]  Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\site-packages\checkov\main.py", line 647, in run
+    self.scan_reports = runner_registry.run(
+                        ~~~~~~~~~~~~~~~~~~~^
+        external_checks_dir=external_checks_dir,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        files=self.config.file,
+        ^^^^^^^^^^^^^^^^^^^^^^^
+        repo_root_for_plan_enrichment=self.config.repo_root_for_plan_enrichment,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\site-packages\checkov\common\runners\runner_registry.py", line 177, in run
+    for result in parallel_runner_results:
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\site-packages\checkov\common\runners\runner_registry.py", line 836, in _parallel_run
+    report = runner.run(
+        root_folder=root_folder,
+    ...<3 lines>...
+        collect_skip_comments=collect_skip_comments,
+    )
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\site-packages\checkov\terraform\runner.py", line 134, in run
+    self.check_tf_definition(report, root_folder, runner_filter, collect_skip_comments)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\site-packages\checkov\terraform\runner.py", line 222, in check_tf_definition
+    definitions_context = parser_registry.enrich_definitions_context(
+        definitions=definition_key_tuple, collect_skip_comments=collect_skip_comments
+    )
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\site-packages\checkov\terraform\context_parsers\registry.py", line 43, in enrich_definitions_context
+    context_parser.run(tf_definition_key, definition_blocks, collect_skip_comments)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\site-packages\checkov\terraform\context_parsers\base_parser.py", line 165, in run
+    self.file_lines = self._read_file_lines()
+                      ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\site-packages\checkov\terraform\context_parsers\base_parser.py", line 83, in _read_file_lines
+    file_lines = [(ind + 1, line) for ind, line in enumerate(file.readlines())]
+                                                             ~~~~~~~~~~~~~~^^
+UnicodeDecodeError: 'cp949' codec can't decode byte 0xec in position 584: illegal multibyte sequence
+
+2025-03-21 12:28:24,849 - __main__ - INFO - Running tfsec scan...
+2025-03-21 12:28:24,849 - __main__ - INFO - Scanning directory: C:\devops\cloud-security-sentinel\examples/safe
+2025-03-21 12:28:25,416 - __main__ - INFO - tfsec scan completed with 0 findings
+2025-03-21 12:28:25,416 - __main__ - INFO - Analyzing vulnerabilities against security standards...
+2025-03-21 12:28:25,423 - __main__ - INFO - Grading vulnerabilities based on NIST 800-53...
+2025-03-21 12:28:25,424 - __main__ - INFO - Scan results saved to C:\devops\cloud-security-sentinel\scan-results.json
+2025-03-21 12:28:25,437 - src.storage.state_manager - INFO - 스캔 이력이 성공적으로 저장되었습니다.
+2025-03-21 12:28:25,437 - __main__ - INFO - No critical security issues detected.
+2025-03-21 12:28:25,440 - src.notification.notification_manager - INFO - 알림을 보낼 취약점이 없습니다.
+2025-03-21 12:30:41,758 - __main__ - INFO - Starting Terraform security scan...
+2025-03-21 12:30:41,759 - __main__ - INFO - Scan path: examples/safe
+2025-03-21 12:30:41,759 - __main__ - INFO - Looking for Terraform files in examples/safe
+2025-03-21 12:30:41,759 - __main__ - INFO - Using absolute path: C:\devops\cloud-security-sentinel\examples/safe
+2025-03-21 12:30:41,760 - __main__ - INFO - Found 1 Terraform files
+2025-03-21 12:30:41,760 - __main__ - INFO - Running Checkov scan...
+2025-03-21 12:30:48,808 - __main__ - ERROR - Checkov scan failed: 2025-03-21 12:30:48,270 [MainThread  ] [ERROR]  Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\site-packages\checkov\main.py", line 647, in run
+    self.scan_reports = runner_registry.run(
+                        ~~~~~~~~~~~~~~~~~~~^
+        external_checks_dir=external_checks_dir,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        files=self.config.file,
+        ^^^^^^^^^^^^^^^^^^^^^^^
+        repo_root_for_plan_enrichment=self.config.repo_root_for_plan_enrichment,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\site-packages\checkov\common\runners\runner_registry.py", line 177, in run
+    for result in parallel_runner_results:
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\site-packages\checkov\common\runners\runner_registry.py", line 836, in _parallel_run
+    report = runner.run(
+        root_folder=root_folder,
+    ...<3 lines>...
+        collect_skip_comments=collect_skip_comments,
+    )
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\site-packages\checkov\terraform\runner.py", line 134, in run
+    self.check_tf_definition(report, root_folder, runner_filter, collect_skip_comments)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\site-packages\checkov\terraform\runner.py", line 222, in check_tf_definition
+    definitions_context = parser_registry.enrich_definitions_context(
+        definitions=definition_key_tuple, collect_skip_comments=collect_skip_comments
+    )
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\site-packages\checkov\terraform\context_parsers\registry.py", line 43, in enrich_definitions_context
+    context_parser.run(tf_definition_key, definition_blocks, collect_skip_comments)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\site-packages\checkov\terraform\context_parsers\base_parser.py", line 165, in run
+    self.file_lines = self._read_file_lines()
+                      ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\site-packages\checkov\terraform\context_parsers\base_parser.py", line 83, in _read_file_lines
+    file_lines = [(ind + 1, line) for ind, line in enumerate(file.readlines())]
+                                                             ~~~~~~~~~~~~~~^^
+UnicodeDecodeError: 'cp949' codec can't decode byte 0xec in position 584: illegal multibyte sequence
+
+2025-03-21 12:30:48,816 - __main__ - INFO - Running tfsec scan...
+2025-03-21 12:30:48,816 - __main__ - INFO - Scanning directory: C:\devops\cloud-security-sentinel\examples/safe
+2025-03-21 12:30:49,426 - __main__ - INFO - tfsec scan completed with 0 findings
+2025-03-21 12:30:49,427 - __main__ - INFO - Analyzing vulnerabilities against security standards...
+2025-03-21 12:30:49,434 - __main__ - INFO - Grading vulnerabilities based on NIST 800-53...
+2025-03-21 12:30:49,435 - __main__ - INFO - Scan results saved to C:\devops\cloud-security-sentinel\scan-results.json
+2025-03-21 12:30:49,448 - src.storage.state_manager - INFO - 스캔 이력이 성공적으로 저장되었습니다.
+2025-03-21 12:30:49,449 - __main__ - INFO - No critical security issues detected.
+2025-03-21 12:30:49,452 - src.notification.notification_manager - INFO - 알림을 보낼 취약점이 없습니다.
+2025-03-21 12:32:41,067 - __main__ - INFO - Starting Terraform security scan...
+2025-03-21 12:32:41,067 - __main__ - INFO - Scan path: examples/safe
+2025-03-21 12:32:41,067 - __main__ - INFO - Looking for Terraform files in examples/safe
+2025-03-21 12:32:41,068 - __main__ - INFO - Using absolute path: C:\devops\cloud-security-sentinel\examples/safe
+2025-03-21 12:32:41,068 - __main__ - INFO - Found 1 Terraform files
+2025-03-21 12:32:41,068 - __main__ - INFO - Running Checkov scan...
+2025-03-21 12:32:48,499 - __main__ - ERROR - Checkov scan failed: 2025-03-21 12:32:47,992 [MainThread  ] [ERROR]  Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\site-packages\checkov\main.py", line 647, in run
+    self.scan_reports = runner_registry.run(
+                        ~~~~~~~~~~~~~~~~~~~^
+        external_checks_dir=external_checks_dir,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        files=self.config.file,
+        ^^^^^^^^^^^^^^^^^^^^^^^
+        repo_root_for_plan_enrichment=self.config.repo_root_for_plan_enrichment,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\site-packages\checkov\common\runners\runner_registry.py", line 177, in run
+    for result in parallel_runner_results:
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\site-packages\checkov\common\runners\runner_registry.py", line 836, in _parallel_run
+    report = runner.run(
+        root_folder=root_folder,
+    ...<3 lines>...
+        collect_skip_comments=collect_skip_comments,
+    )
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\site-packages\checkov\terraform\runner.py", line 134, in run
+    self.check_tf_definition(report, root_folder, runner_filter, collect_skip_comments)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\site-packages\checkov\terraform\runner.py", line 222, in check_tf_definition
+    definitions_context = parser_registry.enrich_definitions_context(
+        definitions=definition_key_tuple, collect_skip_comments=collect_skip_comments
+    )
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\site-packages\checkov\terraform\context_parsers\registry.py", line 43, in enrich_definitions_context
+    context_parser.run(tf_definition_key, definition_blocks, collect_skip_comments)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\site-packages\checkov\terraform\context_parsers\base_parser.py", line 165, in run
+    self.file_lines = self._read_file_lines()
+                      ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\site-packages\checkov\terraform\context_parsers\base_parser.py", line 83, in _read_file_lines
+    file_lines = [(ind + 1, line) for ind, line in enumerate(file.readlines())]
+                                                             ~~~~~~~~~~~~~~^^
+UnicodeDecodeError: 'cp949' codec can't decode byte 0xec in position 584: illegal multibyte sequence
+
+2025-03-21 12:32:48,500 - __main__ - INFO - Running tfsec scan...
+2025-03-21 12:32:48,500 - __main__ - INFO - Scanning directory: C:\devops\cloud-security-sentinel\examples/safe
+2025-03-21 12:32:49,035 - __main__ - INFO - tfsec scan completed with 0 findings
+2025-03-21 12:32:49,035 - __main__ - INFO - Analyzing vulnerabilities against security standards...
+2025-03-21 12:32:49,043 - __main__ - INFO - Grading vulnerabilities based on NIST 800-53...
+2025-03-21 12:32:49,044 - __main__ - INFO - Scan results saved to C:\devops\cloud-security-sentinel\scan-results.json
+2025-03-21 12:32:49,055 - src.storage.state_manager - INFO - 스캔 이력이 성공적으로 저장되었습니다.
+2025-03-21 12:32:49,055 - __main__ - INFO - No critical security issues detected.
+2025-03-21 12:32:49,059 - src.notification.notification_manager - INFO - 알림을 보낼 취약점이 없습니다.
+2025-03-21 12:32:53,993 - __main__ - INFO - Starting Terraform security scan...
+2025-03-21 12:32:53,993 - __main__ - INFO - Scan path: examples/safe
+2025-03-21 12:32:53,994 - __main__ - INFO - Looking for Terraform files in examples/safe
+2025-03-21 12:32:53,994 - __main__ - INFO - Using absolute path: C:\devops\cloud-security-sentinel\examples/safe
+2025-03-21 12:32:53,994 - __main__ - INFO - Found 1 Terraform files
+2025-03-21 12:32:53,994 - __main__ - INFO - Running Checkov scan...
+2025-03-21 12:33:00,625 - __main__ - ERROR - Checkov scan failed: 2025-03-21 12:33:00,071 [MainThread  ] [ERROR]  Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\site-packages\checkov\main.py", line 647, in run
+    self.scan_reports = runner_registry.run(
+                        ~~~~~~~~~~~~~~~~~~~^
+        external_checks_dir=external_checks_dir,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        files=self.config.file,
+        ^^^^^^^^^^^^^^^^^^^^^^^
+        repo_root_for_plan_enrichment=self.config.repo_root_for_plan_enrichment,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\site-packages\checkov\common\runners\runner_registry.py", line 177, in run
+    for result in parallel_runner_results:
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\site-packages\checkov\common\runners\runner_registry.py", line 836, in _parallel_run
+    report = runner.run(
+        root_folder=root_folder,
+    ...<3 lines>...
+        collect_skip_comments=collect_skip_comments,
+    )
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\site-packages\checkov\terraform\runner.py", line 134, in run
+    self.check_tf_definition(report, root_folder, runner_filter, collect_skip_comments)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\site-packages\checkov\terraform\runner.py", line 222, in check_tf_definition
+    definitions_context = parser_registry.enrich_definitions_context(
+        definitions=definition_key_tuple, collect_skip_comments=collect_skip_comments
+    )
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\site-packages\checkov\terraform\context_parsers\registry.py", line 43, in enrich_definitions_context
+    context_parser.run(tf_definition_key, definition_blocks, collect_skip_comments)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\site-packages\checkov\terraform\context_parsers\base_parser.py", line 165, in run
+    self.file_lines = self._read_file_lines()
+                      ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\site-packages\checkov\terraform\context_parsers\base_parser.py", line 83, in _read_file_lines
+    file_lines = [(ind + 1, line) for ind, line in enumerate(file.readlines())]
+                                                             ~~~~~~~~~~~~~~^^
+UnicodeDecodeError: 'cp949' codec can't decode byte 0xec in position 584: illegal multibyte sequence
+
+2025-03-21 12:33:00,626 - __main__ - INFO - Running tfsec scan...
+2025-03-21 12:33:00,626 - __main__ - INFO - Scanning directory: C:\devops\cloud-security-sentinel\examples/safe
+2025-03-21 12:33:01,190 - __main__ - INFO - tfsec scan completed with 0 findings
+2025-03-21 12:33:01,191 - __main__ - INFO - Analyzing vulnerabilities against security standards...
+2025-03-21 12:33:01,198 - __main__ - INFO - Grading vulnerabilities based on NIST 800-53...
+2025-03-21 12:33:01,199 - __main__ - INFO - Scan results saved to C:\devops\cloud-security-sentinel\scan-results.json
+2025-03-21 12:33:01,210 - src.storage.state_manager - INFO - 스캔 이력이 성공적으로 저장되었습니다.
+2025-03-21 12:33:01,210 - __main__ - INFO - No critical security issues detected.
+2025-03-21 12:33:01,213 - src.notification.notification_manager - INFO - 알림을 보낼 취약점이 없습니다.
+2025-03-21 12:35:23,271 - __main__ - INFO - Starting Terraform security scan...
+2025-03-21 12:35:23,272 - __main__ - INFO - Scan path: examples/safe
+2025-03-21 12:35:23,273 - __main__ - INFO - Looking for Terraform files in examples/safe
+2025-03-21 12:35:23,273 - __main__ - INFO - Using absolute path: C:\devops\cloud-security-sentinel\examples/safe
+2025-03-21 12:35:23,274 - __main__ - INFO - Found 1 Terraform files
+2025-03-21 12:35:23,274 - __main__ - INFO - Running Checkov scan...
+2025-03-21 12:35:30,305 - __main__ - ERROR - Checkov scan failed: 2025-03-21 12:35:29,635 [MainThread  ] [ERROR]  Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\site-packages\checkov\main.py", line 647, in run
+    self.scan_reports = runner_registry.run(
+                        ~~~~~~~~~~~~~~~~~~~^
+        external_checks_dir=external_checks_dir,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        files=self.config.file,
+        ^^^^^^^^^^^^^^^^^^^^^^^
+        repo_root_for_plan_enrichment=self.config.repo_root_for_plan_enrichment,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\site-packages\checkov\common\runners\runner_registry.py", line 177, in run
+    for result in parallel_runner_results:
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\site-packages\checkov\common\runners\runner_registry.py", line 836, in _parallel_run
+    report = runner.run(
+        root_folder=root_folder,
+    ...<3 lines>...
+        collect_skip_comments=collect_skip_comments,
+    )
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\site-packages\checkov\terraform\runner.py", line 134, in run
+    self.check_tf_definition(report, root_folder, runner_filter, collect_skip_comments)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\site-packages\checkov\terraform\runner.py", line 222, in check_tf_definition
+    definitions_context = parser_registry.enrich_definitions_context(
+        definitions=definition_key_tuple, collect_skip_comments=collect_skip_comments
+    )
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\site-packages\checkov\terraform\context_parsers\registry.py", line 43, in enrich_definitions_context
+    context_parser.run(tf_definition_key, definition_blocks, collect_skip_comments)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\site-packages\checkov\terraform\context_parsers\base_parser.py", line 165, in run
+    self.file_lines = self._read_file_lines()
+                      ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\YONSAI\AppData\Local\Programs\Python\Python313\Lib\site-packages\checkov\terraform\context_parsers\base_parser.py", line 83, in _read_file_lines
+    file_lines = [(ind + 1, line) for ind, line in enumerate(file.readlines())]
+                                                             ~~~~~~~~~~~~~~^^
+UnicodeDecodeError: 'cp949' codec can't decode byte 0xec in position 584: illegal multibyte sequence
+
+2025-03-21 12:35:30,312 - __main__ - INFO - Running tfsec scan...
+2025-03-21 12:35:30,312 - __main__ - INFO - Scanning directory: C:\devops\cloud-security-sentinel\examples/safe
+2025-03-21 12:35:30,912 - __main__ - INFO - tfsec scan completed with 0 findings
+2025-03-21 12:35:30,912 - __main__ - INFO - Analyzing vulnerabilities against security standards...
+2025-03-21 12:35:30,920 - __main__ - INFO - Grading vulnerabilities based on NIST 800-53...
+2025-03-21 12:35:30,921 - __main__ - INFO - Scan results saved to C:\devops\cloud-security-sentinel\scan-results.json
+2025-03-21 12:35:30,934 - src.storage.state_manager - INFO - 스캔 이력이 성공적으로 저장되었습니다.
+2025-03-21 12:35:30,934 - __main__ - INFO - No critical security issues detected.
+2025-03-21 12:35:30,938 - src.notification.notification_manager - INFO - 알림을 보낼 취약점이 없습니다.
+2025-03-21 12:38:39,908 - __main__ - INFO - Starting Terraform security scan...
+2025-03-21 12:38:39,909 - __main__ - INFO - Scan path: examples/safe
+2025-03-21 12:38:39,909 - __main__ - INFO - Looking for Terraform files in examples/safe
+2025-03-21 12:38:39,910 - __main__ - INFO - Using absolute path: C:\devops\cloud-security-sentinel\examples/safe
+2025-03-21 12:38:39,910 - __main__ - INFO - Found 1 Terraform files
+2025-03-21 12:38:39,911 - __main__ - ERROR - Unhandled exception: name 'run_checkov_scan' is not defined
+Traceback (most recent call last):
+  File "C:\devops\cloud-security-sentinel\src\run_security_scan.py", line 183, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "C:\devops\cloud-security-sentinel\src\run_security_scan.py", line 128, in main
+    checkov_results = run_checkov_scan(tf_files)
+                      ^^^^^^^^^^^^^^^^
+NameError: name 'run_checkov_scan' is not defined
+2025-03-21 12:40:22,883 - __main__ - INFO - Starting Terraform security scan...
+2025-03-21 12:40:22,884 - __main__ - INFO - Scan path: examples/safe
+2025-03-21 12:40:22,884 - __main__ - INFO - Looking for Terraform files in examples/safe
+2025-03-21 12:40:22,884 - __main__ - INFO - Using absolute path: C:\devops\cloud-security-sentinel\examples/safe
+2025-03-21 12:40:22,885 - __main__ - INFO - Found 1 Terraform files
+2025-03-21 12:40:22,885 - __main__ - INFO - Checkov 스캔이 비활성화되었습니다.
+2025-03-21 12:40:22,886 - __main__ - INFO - Running tfsec scan...
+2025-03-21 12:40:22,886 - __main__ - INFO - Scanning directory: C:\devops\cloud-security-sentinel\examples/safe
+2025-03-21 12:40:23,471 - __main__ - INFO - tfsec scan completed with 0 findings
+2025-03-21 12:40:23,472 - __main__ - INFO - Analyzing vulnerabilities against security standards...
+2025-03-21 12:40:23,479 - __main__ - INFO - Grading vulnerabilities based on NIST 800-53...
+2025-03-21 12:40:23,480 - __main__ - INFO - Scan results saved to C:\devops\cloud-security-sentinel\scan-results.json
+2025-03-21 12:40:23,496 - src.storage.state_manager - INFO - 스캔 이력이 성공적으로 저장되었습니다.
+2025-03-21 12:40:23,496 - __main__ - INFO - No critical security issues detected.
+2025-03-21 12:40:23,500 - src.notification.notification_manager - INFO - 알림을 보낼 취약점이 없습니다.
+2025-03-21 12:43:00,123 - __main__ - INFO - Starting Terraform security scan...
+2025-03-21 12:43:00,123 - __main__ - INFO - Scan path: examples/vulnerable
+2025-03-21 12:43:00,124 - __main__ - INFO - Looking for Terraform files in examples/vulnerable
+2025-03-21 12:43:00,124 - __main__ - INFO - Using absolute path: C:\devops\cloud-security-sentinel\examples/vulnerable
+2025-03-21 12:43:00,125 - __main__ - INFO - Found 1 Terraform files
+2025-03-21 12:43:00,125 - __main__ - INFO - Checkov 스캔이 비활성화되었습니다.
+2025-03-21 12:43:00,125 - __main__ - INFO - Running tfsec scan...
+2025-03-21 12:43:00,126 - __main__ - INFO - Scanning directory: C:\devops\cloud-security-sentinel\examples/vulnerable
+2025-03-21 12:43:00,705 - __main__ - INFO - tfsec scan completed with 17 findings
+2025-03-21 12:43:00,706 - __main__ - INFO - Analyzing vulnerabilities against security standards...
+2025-03-21 12:43:00,713 - __main__ - INFO - Grading vulnerabilities based on NIST 800-53...
+2025-03-21 12:43:00,756 - __main__ - INFO - Scan results saved to C:\devops\cloud-security-sentinel\scan-results.json
+2025-03-21 12:43:00,769 - src.storage.state_manager - INFO - 스캔 이력이 성공적으로 저장되었습니다.
+2025-03-21 12:43:00,770 - __main__ - WARNING - CRITICAL security issues detected!
+2025-03-21 12:43:00,773 - src.notification.notification_manager - INFO - 알림 전송 시작: 총 17개의 취약점
+2025-03-21 12:43:00,774 - src.notification.notification_manager - ERROR - Slack 웹훅 URL이 환경 변수(SLACK_WEBHOOK_URL)에 설정되지 않았습니다.
+2025-03-21 12:43:00,774 - src.notification.notification_manager - ERROR - SMTP 자격 증명이 환경 변수에 설정되지 않았습니다.
+2025-03-21 12:43:00,775 - src.notification.notification_manager - ERROR - GitHub 토큰이 환경 변수에 설정되지 않았습니다.
+2025-03-21 12:43:00,775 - src.notification.notification_manager - INFO - 알림 전송 결과: Slack=False, 이메일=False, GitHub=False
+2025-03-21 12:44:49,866 - __main__ - INFO - Starting Terraform security scan...
+2025-03-21 12:44:49,867 - __main__ - INFO - Scan path: examples/safe
+2025-03-21 12:44:49,867 - __main__ - INFO - Looking for Terraform files in examples/safe
+2025-03-21 12:44:49,868 - __main__ - INFO - Using absolute path: C:\devops\cloud-security-sentinel\examples/safe
+2025-03-21 12:44:49,868 - __main__ - INFO - Found 1 Terraform files
+2025-03-21 12:44:49,869 - __main__ - INFO - Checkov 스캔이 비활성화되었습니다.
+2025-03-21 12:44:49,869 - __main__ - INFO - Running tfsec scan...
+2025-03-21 12:44:49,870 - __main__ - INFO - Scanning directory: C:\devops\cloud-security-sentinel\examples/safe
+2025-03-21 12:44:50,649 - __main__ - INFO - tfsec scan completed with 0 findings
+2025-03-21 12:44:50,650 - __main__ - INFO - Analyzing vulnerabilities against security standards...
+2025-03-21 12:44:50,658 - __main__ - INFO - Grading vulnerabilities based on NIST 800-53...
+2025-03-21 12:44:50,659 - __main__ - INFO - Scan results saved to C:\devops\cloud-security-sentinel\scan-results.json
+2025-03-21 12:44:50,678 - src.storage.state_manager - INFO - 스캔 이력이 성공적으로 저장되었습니다.
+2025-03-21 12:44:50,679 - __main__ - INFO - No critical security issues detected.
+2025-03-21 12:44:50,685 - src.notification.notification_manager - INFO - 알림을 보낼 취약점이 없습니다.
+2025-03-21 12:44:54,294 - __main__ - INFO - Starting Terraform security scan...
+2025-03-21 12:44:54,295 - __main__ - INFO - Scan path: examples/vulnerable
+2025-03-21 12:44:54,295 - __main__ - INFO - Looking for Terraform files in examples/vulnerable
+2025-03-21 12:44:54,295 - __main__ - INFO - Using absolute path: C:\devops\cloud-security-sentinel\examples/vulnerable
+2025-03-21 12:44:54,296 - __main__ - INFO - Found 1 Terraform files
+2025-03-21 12:44:54,296 - __main__ - INFO - Checkov 스캔이 비활성화되었습니다.
+2025-03-21 12:44:54,296 - __main__ - INFO - Running tfsec scan...
+2025-03-21 12:44:54,297 - __main__ - INFO - Scanning directory: C:\devops\cloud-security-sentinel\examples/vulnerable
+2025-03-21 12:44:54,867 - __main__ - INFO - tfsec scan completed with 17 findings
+2025-03-21 12:44:54,868 - __main__ - INFO - Analyzing vulnerabilities against security standards...
+2025-03-21 12:44:54,875 - __main__ - INFO - Grading vulnerabilities based on NIST 800-53...
+2025-03-21 12:44:54,918 - __main__ - INFO - Scan results saved to C:\devops\cloud-security-sentinel\scan-results.json
+2025-03-21 12:44:54,929 - src.storage.state_manager - INFO - 스캔 이력이 성공적으로 저장되었습니다.
+2025-03-21 12:44:54,930 - __main__ - WARNING - CRITICAL security issues detected!
+2025-03-21 12:44:54,933 - src.notification.notification_manager - INFO - 알림 전송 시작: 총 17개의 취약점
+2025-03-21 12:44:54,933 - src.notification.notification_manager - ERROR - Slack 웹훅 URL이 환경 변수(SLACK_WEBHOOK_URL)에 설정되지 않았습니다.
+2025-03-21 12:44:54,934 - src.notification.notification_manager - ERROR - SMTP 자격 증명이 환경 변수에 설정되지 않았습니다.
+2025-03-21 12:44:54,934 - src.notification.notification_manager - ERROR - GitHub 토큰이 환경 변수에 설정되지 않았습니다.
+2025-03-21 12:44:54,934 - src.notification.notification_manager - INFO - 알림 전송 결과: Slack=False, 이메일=False, GitHub=False
+2025-03-21 12:46:26,733 - __main__ - INFO - Starting Terraform security scan...
+2025-03-21 12:46:26,734 - __main__ - INFO - Scan path: examples/vulnerable
+2025-03-21 12:46:26,735 - __main__ - INFO - Looking for Terraform files in examples/vulnerable
+2025-03-21 12:46:26,735 - __main__ - INFO - Using absolute path: C:\devops\cloud-security-sentinel\examples/vulnerable
+2025-03-21 12:46:26,736 - __main__ - INFO - Found 1 Terraform files
+2025-03-21 12:46:26,736 - __main__ - INFO - Checkov 스캔이 비활성화되었습니다.
+2025-03-21 12:46:26,736 - __main__ - INFO - Running tfsec scan...
+2025-03-21 12:46:26,737 - __main__ - INFO - Scanning directory: C:\devops\cloud-security-sentinel\examples/vulnerable
+2025-03-21 12:46:27,362 - __main__ - INFO - tfsec scan completed with 17 findings
+2025-03-21 12:46:27,363 - __main__ - INFO - Analyzing vulnerabilities against security standards...
+2025-03-21 12:46:27,370 - __main__ - INFO - Grading vulnerabilities based on NIST 800-53...
+2025-03-21 12:46:27,414 - __main__ - INFO - Scan results saved to C:\devops\cloud-security-sentinel\scan-results.json
+2025-03-21 12:46:27,427 - src.storage.state_manager - INFO - 스캔 이력이 성공적으로 저장되었습니다.
+2025-03-21 12:46:27,428 - __main__ - WARNING - CRITICAL security issues detected!
+2025-03-21 12:46:27,431 - src.notification.notification_manager - INFO - 알림 전송 시작: 총 17개의 취약점
+2025-03-21 12:46:27,432 - src.notification.notification_manager - ERROR - Slack 웹훅 URL이 환경 변수(SLACK_WEBHOOK_URL)에 설정되지 않았습니다.
+2025-03-21 12:46:27,432 - src.notification.notification_manager - ERROR - SMTP 자격 증명이 환경 변수에 설정되지 않았습니다.
+2025-03-21 12:46:27,433 - src.notification.notification_manager - ERROR - GitHub 토큰이 환경 변수에 설정되지 않았습니다.
+2025-03-21 12:46:27,433 - src.notification.notification_manager - INFO - 알림 전송 결과: Slack=False, 이메일=False, GitHub=False
+2025-03-21 12:46:34,644 - __main__ - INFO - Starting Terraform security scan...
+2025-03-21 12:46:34,645 - __main__ - INFO - Scan path: examples/vulnerable
+2025-03-21 12:46:34,645 - __main__ - INFO - Looking for Terraform files in examples/vulnerable
+2025-03-21 12:46:34,645 - __main__ - INFO - Using absolute path: C:\devops\cloud-security-sentinel\examples/vulnerable
+2025-03-21 12:46:34,646 - __main__ - INFO - Found 1 Terraform files
+2025-03-21 12:46:34,646 - __main__ - INFO - Checkov 스캔이 비활성화되었습니다.
+2025-03-21 12:46:34,647 - __main__ - INFO - Running tfsec scan...
+2025-03-21 12:46:34,647 - __main__ - INFO - Scanning directory: C:\devops\cloud-security-sentinel\examples/vulnerable
+2025-03-21 12:46:35,209 - __main__ - INFO - tfsec scan completed with 17 findings
+2025-03-21 12:46:35,210 - __main__ - INFO - Analyzing vulnerabilities against security standards...
+2025-03-21 12:46:35,217 - __main__ - INFO - Grading vulnerabilities based on NIST 800-53...
+2025-03-21 12:46:35,261 - __main__ - INFO - Scan results saved to C:\devops\cloud-security-sentinel\scan-results.json
+2025-03-21 12:46:35,273 - src.storage.state_manager - INFO - 스캔 이력이 성공적으로 저장되었습니다.
+2025-03-21 12:46:35,274 - __main__ - WARNING - CRITICAL security issues detected!
+2025-03-21 12:46:35,277 - src.notification.notification_manager - INFO - 알림 전송 시작: 총 17개의 취약점
+2025-03-21 12:46:35,277 - src.notification.notification_manager - ERROR - Slack 웹훅 URL이 환경 변수(SLACK_WEBHOOK_URL)에 설정되지 않았습니다.
+2025-03-21 12:46:35,277 - src.notification.notification_manager - ERROR - SMTP 자격 증명이 환경 변수에 설정되지 않았습니다.
+2025-03-21 12:46:35,278 - src.notification.notification_manager - ERROR - GitHub 토큰이 환경 변수에 설정되지 않았습니다.
+2025-03-21 12:46:35,278 - src.notification.notification_manager - INFO - 알림 전송 결과: Slack=False, 이메일=False, GitHub=False
+2025-03-21 14:05:59,965 - __main__ - INFO - Starting Terraform security scan...
+2025-03-21 14:05:59,966 - __main__ - INFO - Scan path: examples/vulnerable
+2025-03-21 14:05:59,966 - __main__ - INFO - Looking for Terraform files in examples/vulnerable
+2025-03-21 14:05:59,967 - __main__ - INFO - Using absolute path: C:\devops\cloud-security-sentinel\examples/vulnerable
+2025-03-21 14:05:59,967 - __main__ - INFO - Found 1 Terraform files
+2025-03-21 14:05:59,968 - __main__ - INFO - Checkov 스캔이 비활성화되었습니다.
+2025-03-21 14:05:59,968 - __main__ - INFO - Running tfsec scan...
+2025-03-21 14:05:59,968 - __main__ - INFO - Scanning directory: C:\devops\cloud-security-sentinel\examples/vulnerable
+2025-03-21 14:06:00,788 - __main__ - INFO - tfsec scan completed with 17 findings
+2025-03-21 14:06:00,788 - __main__ - INFO - Analyzing vulnerabilities against security standards...
+2025-03-21 14:06:00,805 - __main__ - INFO - Grading vulnerabilities based on NIST 800-53...
+2025-03-21 14:06:00,856 - __main__ - INFO - Scan results saved to C:\devops\cloud-security-sentinel\scan-results.json
+2025-03-21 14:06:00,872 - src.storage.state_manager - INFO - 스캔 이력이 성공적으로 저장되었습니다.
+2025-03-21 14:06:00,872 - __main__ - WARNING - CRITICAL security issues detected!
+2025-03-21 14:06:00,876 - src.notification.notification_manager - INFO - 알림 전송 시작: 총 17개의 취약점
+2025-03-21 14:06:00,877 - src.notification.notification_manager - ERROR - Slack 웹훅 URL이 환경 변수(SLACK_WEBHOOK_URL)에 설정되지 않았습니다.
+2025-03-21 14:06:00,878 - src.notification.notification_manager - ERROR - SMTP 자격 증명이 환경 변수에 설정되지 않았습니다.
+2025-03-21 14:06:00,878 - src.notification.notification_manager - ERROR - GitHub 토큰이 환경 변수에 설정되지 않았습니다.
+2025-03-21 14:06:00,879 - src.notification.notification_manager - INFO - 알림 전송 결과: Slack=False, 이메일=False, GitHub=False
+2025-03-21 14:08:47,143 - __main__ - INFO - Starting Terraform security scan...
+2025-03-21 14:08:47,144 - __main__ - INFO - Scan path: examples/vulnerable
+2025-03-21 14:08:47,145 - __main__ - INFO - Looking for Terraform files in examples/vulnerable
+2025-03-21 14:08:47,146 - __main__ - INFO - Using absolute path: C:\devops\cloud-security-sentinel\examples/vulnerable
+2025-03-21 14:08:47,146 - __main__ - INFO - Found 1 Terraform files
+2025-03-21 14:08:47,147 - __main__ - INFO - Checkov 스캔이 비활성화되었습니다.
+2025-03-21 14:08:47,147 - __main__ - INFO - Running tfsec scan...
+2025-03-21 14:08:47,147 - __main__ - INFO - Scanning directory: C:\devops\cloud-security-sentinel\examples/vulnerable
+2025-03-21 14:08:47,812 - __main__ - INFO - tfsec scan completed with 17 findings
+2025-03-21 14:08:47,813 - __main__ - INFO - Analyzing vulnerabilities against security standards...
+2025-03-21 14:08:47,821 - __main__ - INFO - Grading vulnerabilities based on NIST 800-53...
+2025-03-21 14:08:47,868 - __main__ - INFO - Scan results saved to C:\devops\cloud-security-sentinel\scan-results.json
+2025-03-21 14:08:47,881 - src.storage.state_manager - INFO - 스캔 이력이 성공적으로 저장되었습니다.
+2025-03-21 14:08:47,882 - __main__ - WARNING - CRITICAL security issues detected!
+2025-03-21 14:08:47,885 - src.notification.notification_manager - INFO - 알림 전송 시작: 총 17개의 취약점
+2025-03-21 14:08:47,885 - src.notification.notification_manager - ERROR - Slack 웹훅 URL이 환경 변수(SLACK_WEBHOOK_URL)에 설정되지 않았습니다.
+2025-03-21 14:08:47,886 - src.notification.notification_manager - ERROR - SMTP 자격 증명이 환경 변수에 설정되지 않았습니다.
+2025-03-21 14:08:47,886 - src.notification.notification_manager - ERROR - GitHub 토큰이 환경 변수에 설정되지 않았습니다.
+2025-03-21 14:08:47,887 - src.notification.notification_manager - INFO - 알림 전송 결과: Slack=False, 이메일=False, GitHub=False
+2025-03-21 14:09:48,713 - __main__ - INFO - Starting Terraform security scan...
+2025-03-21 14:09:48,714 - __main__ - INFO - Scan path: examples/vulnerable
+2025-03-21 14:09:48,714 - __main__ - INFO - Looking for Terraform files in examples/vulnerable
+2025-03-21 14:09:48,714 - __main__ - INFO - Using absolute path: C:\devops\cloud-security-sentinel\examples/vulnerable
+2025-03-21 14:09:48,715 - __main__ - INFO - Found 1 Terraform files
+2025-03-21 14:09:48,715 - __main__ - INFO - Checkov 스캔이 비활성화되었습니다.
+2025-03-21 14:09:48,716 - __main__ - INFO - Running tfsec scan...
+2025-03-21 14:09:48,716 - __main__ - INFO - Scanning directory: C:\devops\cloud-security-sentinel\examples/vulnerable
+2025-03-21 14:09:49,385 - __main__ - INFO - tfsec scan completed with 17 findings
+2025-03-21 14:09:49,385 - __main__ - INFO - Analyzing vulnerabilities against security standards...
+2025-03-21 14:09:49,393 - __main__ - INFO - Grading vulnerabilities based on NIST 800-53...
+2025-03-21 14:09:49,441 - __main__ - INFO - Scan results saved to C:\devops\cloud-security-sentinel\scan-results.json
+2025-03-21 14:09:49,456 - src.storage.state_manager - INFO - 스캔 이력이 성공적으로 저장되었습니다.
+2025-03-21 14:09:49,457 - __main__ - WARNING - CRITICAL security issues detected!
+2025-03-21 14:09:49,460 - src.notification.notification_manager - INFO - 알림 전송 시작: 총 17개의 취약점
+2025-03-21 14:09:49,462 - src.notification.notification_manager - ERROR - Slack 웹훅 URL이 환경 변수(SLACK_WEBHOOK_URL)에 설정되지 않았습니다.
+2025-03-21 14:09:49,463 - src.notification.notification_manager - ERROR - SMTP 자격 증명이 환경 변수에 설정되지 않았습니다.
+2025-03-21 14:09:49,464 - src.notification.notification_manager - ERROR - GitHub 토큰이 환경 변수에 설정되지 않았습니다.
+2025-03-21 14:09:49,464 - src.notification.notification_manager - INFO - 알림 전송 결과: Slack=False, 이메일=False, GitHub=False
+2025-03-21 14:11:25,584 - __main__ - INFO - Starting Terraform security scan...
+2025-03-21 14:11:25,585 - __main__ - INFO - Scan path: examples/vulnerable
+2025-03-21 14:11:25,585 - __main__ - INFO - Looking for Terraform files in examples/vulnerable
+2025-03-21 14:11:25,586 - __main__ - INFO - Using absolute path: C:\devops\cloud-security-sentinel\examples/vulnerable
+2025-03-21 14:11:25,586 - __main__ - INFO - Found 1 Terraform files
+2025-03-21 14:11:25,586 - __main__ - INFO - Checkov 스캔이 비활성화되었습니다.
+2025-03-21 14:11:25,587 - __main__ - INFO - Running tfsec scan...
+2025-03-21 14:11:25,587 - __main__ - INFO - Scanning directory: C:\devops\cloud-security-sentinel\examples/vulnerable
+2025-03-21 14:11:26,238 - __main__ - INFO - tfsec scan completed with 17 findings
+2025-03-21 14:11:26,238 - __main__ - INFO - Analyzing vulnerabilities against security standards...
+2025-03-21 14:11:26,247 - __main__ - INFO - Grading vulnerabilities based on NIST 800-53...
+2025-03-21 14:11:26,298 - __main__ - INFO - Scan results saved to C:\devops\cloud-security-sentinel\scan-results.json
+2025-03-21 14:11:26,312 - src.storage.state_manager - INFO - 스캔 이력이 성공적으로 저장되었습니다.
+2025-03-21 14:11:26,313 - __main__ - WARNING - CRITICAL security issues detected!
+2025-03-21 14:11:26,317 - src.notification.notification_manager - INFO - 알림 전송 시작: 총 17개의 취약점
+2025-03-21 14:11:26,317 - src.notification.notification_manager - ERROR - Slack 웹훅 URL이 환경 변수(SLACK_WEBHOOK_URL)에 설정되지 않았습니다.
+2025-03-21 14:11:26,318 - src.notification.notification_manager - ERROR - SMTP 자격 증명이 환경 변수에 설정되지 않았습니다.
+2025-03-21 14:11:26,318 - src.notification.notification_manager - ERROR - GitHub 토큰이 환경 변수에 설정되지 않았습니다.
+2025-03-21 14:11:26,319 - src.notification.notification_manager - INFO - 알림 전송 결과: Slack=False, 이메일=False, GitHub=False

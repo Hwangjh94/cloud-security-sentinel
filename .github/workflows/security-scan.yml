@@ -1,0 +1,74 @@
+name: Terraform Security Scan
+
+on:
+  push:
+    paths:
+      - '**.tf'
+  pull_request:
+    paths:
+      - '**.tf'
+
+jobs:
+  security-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install checkov tfsec
+
+      - name: Run security scan
+        id: security_scan
+        run: python src/run_security_scan.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_SHA: ${{ github.sha }}
+          GITHUB_ACTOR: ${{ github.actor }}
+
+      - name: Tag developer for critical issues
+        if: steps.security_scan.outputs.critical_issues == 'true'
+        run: python -m src.user_management.developer_tagger
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_SHA: ${{ github.sha }}
+          GITHUB_ACTOR: ${{ github.actor }}
+
+      - name: Block workflow for critical issues
+        if: steps.security_scan.outputs.critical_issues == 'true'
+        run: python -m src.workflow_control.block_manager
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_ACTOR: ${{ github.actor }}
+
+      - name: Wait for admin approval
+        if: steps.security_scan.outputs.critical_issues == 'true'
+        uses: trstringer/manual-approval@v1
+        with:
+          secret: ${{ secrets.GITHUB_TOKEN }}
+          approvers: ${{ secrets.SECURITY_ADMIN_USERS }}
+          minimum-approvals: 1
+          issue-title: "보안 승인 필요: ${{ github.actor }}의 푸시에서 CRITICAL 취약점 발견"
+          issue-body: "CRITICAL 등급의 보안 취약점이 발견되었습니다. 검토 후 승인해주세요."
+
+      - name: Create security report
+        run: |
+          mkdir -p security-reports
+          cp scan-results.json security-reports/
+          
+      - name: Upload security report
+        uses: actions/upload-artifact@v3
+        with:
+          name: security-reports
+          path: security-reports/
