@@ -1229,3 +1229,22 @@ NameError: name 'run_checkov_scan' is not defined
 2025-03-21 14:20:42,989 - src.notification.notification_manager - ERROR - SMTP 자격 증명이 환경 변수에 설정되지 않았습니다.
 2025-03-21 14:20:42,989 - src.notification.notification_manager - ERROR - GitHub 토큰이 환경 변수에 설정되지 않았습니다.
 2025-03-21 14:20:42,989 - src.notification.notification_manager - INFO - 알림 전송 결과: Slack=False, 이메일=False, GitHub=False
+2025-03-21 15:00:44,614 - __main__ - INFO - Starting Terraform security scan...
+2025-03-21 15:00:44,615 - __main__ - INFO - Scan path: examples/vulnerable
+2025-03-21 15:00:44,615 - __main__ - INFO - Looking for Terraform files in examples/vulnerable
+2025-03-21 15:00:44,616 - __main__ - INFO - Using absolute path: C:\devops\cloud-security-sentinel\examples/vulnerable
+2025-03-21 15:00:44,616 - __main__ - INFO - Found 1 Terraform files
+2025-03-21 15:00:44,616 - __main__ - INFO - Checkov 스캔이 비활성화되었습니다.
+2025-03-21 15:00:44,617 - __main__ - INFO - Running tfsec scan...
+2025-03-21 15:00:44,617 - __main__ - INFO - Scanning directory: C:\devops\cloud-security-sentinel\examples/vulnerable
+2025-03-21 15:00:45,232 - __main__ - INFO - tfsec scan completed with 17 findings
+2025-03-21 15:00:45,233 - __main__ - INFO - Analyzing vulnerabilities against security standards...
+2025-03-21 15:00:45,241 - __main__ - INFO - Grading vulnerabilities based on NIST 800-53...
+2025-03-21 15:00:45,286 - __main__ - INFO - Scan results saved to C:\devops\cloud-security-sentinel\scan-results.json
+2025-03-21 15:00:45,290 - src.storage.state_manager - INFO - 스캔 이력이 성공적으로 저장되었습니다.
+2025-03-21 15:00:45,291 - __main__ - WARNING - CRITICAL security issues detected!
+2025-03-21 15:00:45,294 - src.notification.notification_manager - INFO - 알림 전송 시작: 총 17개의 취약점
+2025-03-21 15:00:45,295 - src.notification.notification_manager - ERROR - Slack 웹훅 URL이 환경 변수(SLACK_WEBHOOK_URL)에 설정되지 않았습니다.
+2025-03-21 15:00:45,295 - src.notification.notification_manager - ERROR - SMTP 자격 증명이 환경 변수에 설정되지 않았습니다.
+2025-03-21 15:00:45,295 - src.notification.notification_manager - ERROR - GitHub 토큰이 환경 변수에 설정되지 않았습니다.
+2025-03-21 15:00:45,296 - src.notification.notification_manager - INFO - 알림 전송 결과: Slack=False, 이메일=False, GitHub=False
