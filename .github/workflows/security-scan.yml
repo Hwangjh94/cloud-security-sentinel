@@ -22,9 +22,13 @@ jobs:
 
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-          pip install checkov tfsec
+            python -m pip install --upgrade pip
+            pip install -r requirements.txt
+            pip install checkov
+        
+      - name: Install tfsec
+        run: |
+            curl -s https://raw.githubusercontent.com/aquasecurity/tfsec/master/scripts/install_linux.sh | bash
 
       - name: Run security scan
         id: security_scan
